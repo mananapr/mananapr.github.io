@@ -2,4 +2,4 @@
 
 **posts**
 
-- [rice](/rice.html)
+- [rice](/blog/rice.html)
