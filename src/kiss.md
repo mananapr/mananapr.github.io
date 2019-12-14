@@ -9,7 +9,7 @@ After checking out the website, I was sold. I immediately formatted my Alpine pa
 and installed KISS.
 
 <picture>
-  <img src="/blog/images/kiss1.png" alt="kiss">
+  <img src="/images/kiss1.png" alt="kiss">
 </picture>
 
 KISS is a source based distro that like Alpine, uses `musl` libc. Yes, compiling packages
@@ -21,7 +21,7 @@ The packaging system is also pretty simple and straightforward, following the KI
 All of the utilities like the package manager for example, have been written in POSIX compliant shell script.
 
 <picture>
-  <img src="/blog/images/kiss2.png" alt="kiss">
+  <img src="/images/kiss2.png" alt="kiss">
 </picture>
 
 The KISS package manager doesn't handles the kernel. That means you have to download the kernel source (and firmware blobs if needed)
@@ -35,7 +35,7 @@ I also switched from `openbox` to `sowm`, which is also made by the same guy who
 But I have gotten used to the floating only workflow, thanks to tmux :)
 
 <picture>
-  <img src="/blog/images/kiss3.png" alt="kiss">
+  <img src="/images/kiss3.png" alt="kiss">
 </picture>
 
 This project is single-handedly managed and maintained by Dylan Araps.

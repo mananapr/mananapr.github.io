@@ -2,7 +2,7 @@
 
 **posts**
 
-- [android](/blog/android)
-- [kiss](/blog/kiss)
-- [vim](/blog/vim)
-- [rice](/blog/rice)
+- [android](/android.html)
+- [kiss](/kiss.html)
+- [vim](/vim.html)
+- [rice](/rice.html)

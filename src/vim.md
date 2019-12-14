@@ -4,7 +4,7 @@ Like I mentioned in my [previous](https://mananapr.github.io/blog/rice) post, I 
 It's light, minimal and fast. Just to illustrate how fast it is, I can open my 110MB irc log file in vim instantly and experience no lag whatsoever.  
 
 <picture>
-  <img src="/blog/images/vim1.png" alt="vim">
+  <img src="/images/vim1.png" alt="vim">
 </picture>
 
 I only have 5 plugins installed with only two of those being a part of my workflow.
@@ -20,7 +20,7 @@ So, just a simple
 installs and enables a plugin.
 
 <picture>
-  <img src="/blog/images/vim2.png" alt="vim">
+  <img src="/images/vim2.png" alt="vim">
 </picture>
 
 I've seen a lot of people use vim plugins that provide functionality which is already present in vim.
@@ -48,7 +48,7 @@ I have remapped them to `ctrl + h/j/k/l`
 ```
 
 <picture>
-  <img src="/blog/images/vim3.png" alt="vim">
+  <img src="/images/vim3.png" alt="vim">
 </picture>
 
 Although vim is great, the code is a mess. I might switch to lighter and cleaner alternatives like `vis` in the future

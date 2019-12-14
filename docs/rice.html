@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang=en><head><meta name="description" content="I like to dream"/><link href="data:image/png;base64," rel=icon type="image/png"><title>mnnpr</title><meta name=viewport content="width=device-width"><style>body{overflow-y:scroll;font-family:sans-serif}img,main,pre>code{display:block;margin:25px auto}main{padding:20px;max-width:600px;line-height:1.6;word-wrap:break-word}img{max-width:100%}pre>code{padding:20px;white-space:pre-wrap}code{background:#eee;padding:2px}blockquote{border-left:7px solid #ddd;padding:0 14px;color:#666;margin:0}h1,h2,h3,h4{line-height:1.2}hr{border:2px solid #ddd}</style></head><body><main><a href='/blog'>mnnpr</a><h1 id="minimal-linux-desktop">Minimal Linux desktop</h1>
+<!DOCTYPE html><html lang=en><head><meta name="description" content="I like to dream"/><link href="data:image/png;base64," rel=icon type="image/png"><title>mnnpr</title><meta name=viewport content="width=device-width"><style>body{overflow-y:scroll;font-family:sans-serif}img,main,pre>code{display:block;margin:25px auto}main{padding:20px;max-width:600px;line-height:1.6;word-wrap:break-word}img{max-width:100%}pre>code{padding:20px;white-space:pre-wrap}code{background:#eee;padding:2px}blockquote{border-left:7px solid #ddd;padding:0 14px;color:#666;margin:0}h1,h2,h3,h4{line-height:1.2}hr{border:2px solid #ddd}</style></head><body><main><a href='/'>mnnpr</a><h1 id="minimal-linux-desktop">Minimal Linux desktop</h1>
 <p>My laptop runs Alpine Linux with Openbox as its window manager. The only GUI applications that run are my web browser(<code>firefox</code>) and my password manager(<code>KeepassXC</code>). The rest of the system is controlled and used through the terminal.</p>
 <pre><code>   /\ /\        manan@miku
   // \  \       os     Alpine Linux edge
@@ -7,19 +7,19 @@
 //      \  \    uptime 1d 9h 31m
          \      pkgs   484
                 memory 317M / 7878M</code></pre>
-<p>I don&#x2019;t use an automatic wallpaper based colorscehme generator like <code>pywal</code> but have it installed to manage my static colorschemes.</p>
-<p><picture> <img src="/blog/images/rice1.png" alt="desktop"> </picture></p>
-<p>The system information tool I use is a simple bash script called <a href="https://github.com/dylanaraps/pfetch"><code>pfetch</code></a>. I don&#x2019;t use a bar but have a simple <a href="https://github.com/mananapr/dotfiles/blob/master/bin/bar">shell script</a> to display a popup that shows me information like time and battery.</p>
-<p><picture> <img src="/blog/images/rice2.png" alt="desktop"> </picture></p>
-<p>My text editor is <code>vim</code> using the <code>goyo</code> plugin to hide the user interface and center the file&#x2019;s contents. I will write more about my vim setup in a separate post. The music player is <code>mpv</code> running inside of my local music library. I do not need a fancy program to provide a library, playlists and metadata.</p>
+<p>I don't use an automatic wallpaper based colorscehme generator like <code>pywal</code> but have it installed to manage my static colorschemes.</p>
+<p><picture> <img src="/images/rice1.png" alt="desktop"> </picture></p>
+<p>The system information tool I use is a simple bash script called <a href="https://github.com/dylanaraps/pfetch"><code>pfetch</code></a>. I don't use a bar but have a simple <a href="https://github.com/mananapr/dotfiles/blob/master/bin/bar">shell script</a> to display a popup that shows me information like time and battery.</p>
+<p><picture> <img src="/images/rice2.png" alt="desktop"> </picture></p>
+<p>My text editor is <code>vim</code> using the <code>goyo</code> plugin to hide the user interface and center the file's contents. I will write more about my vim setup in a separate post. The music player is <code>mpv</code> running inside of my local music library. I do not need a fancy program to provide a library, playlists and metadata.</p>
 <p>The big upside to <code>mpv</code> is that my video player, image viewer and music player are all the same program. The configuration is unified between the three and the hotkeys are all the same.</p>
-<p><picture> <img src="/blog/images/rice3.png" alt="desktop"> </picture></p>
+<p><picture> <img src="/images/rice3.png" alt="desktop"> </picture></p>
 <p>I talk primarily over IRC using the <code>irssi</code> irc client, with most of its interafce hidden. To stay logged into the IRC servers all the time I run <code>irssi</code> on a raspberry pi which stays on 24x7. I can then ssh into the pi to use irc.</p>
-<p><picture> <img src="/blog/images/rice4.png" alt="desktop"> </picture></p>
-<p>Resource usage is extremely low and time on battery is high. So far I have been loving Alpine Linux. After 3 years of using Arch, I wanted to try a distro wihout <code>systemd</code> and <code>dbus</code> and decided to go with Alpine considering it&#x2019;s incredibly small base install size.</p>
-<p>That being said Alpine has it&#x2019;s negatives too. Some proprietary applications like games for eg, are compiled against <code>glibc</code> but as Alpine uses <code>musl</code> as it&#x2019;s libc they won&#x2019;t work on Alpine. Also packages are not updated in a timely manner and the project suffers from a lack of maintainers.</p>
-<p><picture> <img src="/blog/images/rice5.png" alt="desktop"> </picture></p>
-<p>I used to use <code>i3-gaps</code> as my WM before switching to <code>Openbox</code> and to make up for i3&#x2019;s tiling capabilities I have been using a tiling script called <code>rtile</code>.</p>
+<p><picture> <img src="/images/rice4.png" alt="desktop"> </picture></p>
+<p>Resource usage is extremely low and time on battery is high. So far I have been loving Alpine Linux. After 3 years of using Arch, I wanted to try a distro wihout <code>systemd</code> and <code>dbus</code> and decided to go with Alpine considering it's incredibly small base install size.</p>
+<p>That being said Alpine has it's negatives too. Some proprietary applications like games for eg, are compiled against <code>glibc</code> but as Alpine uses <code>musl</code> as it's libc they won't work on Alpine. Also packages are not updated in a timely manner and the project suffers from a lack of maintainers.</p>
+<p><picture> <img src="/images/rice5.png" alt="desktop"> </picture></p>
+<p>I used to use <code>i3-gaps</code> as my WM before switching to <code>Openbox</code> and to make up for i3's tiling capabilities I have been using a tiling script called <code>rtile</code>.</p>
 <hr />
 <p>Sources:</p>
 <ul>

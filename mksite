@@ -12,7 +12,7 @@ for md in src/*.md; do
     file_name=${md##*/}
 
     [[ $file_name != index.md ]] &&
-        home="<a href='/blog'>mnnpr</a>"
+        home="<a href='/'>mnnpr</a>"
 
 
     echo "${templ/'{{content}}'/${home}$(pandoc --ascii "$md")}" > "docs/${file_name/%.md/.html}"

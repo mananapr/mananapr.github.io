@@ -1,7 +1,7 @@
 # Android Phone Setup
 
 <picture>
-  <img src="/blog/images/android.png" alt="android">
+  <img src="/images/android.png" alt="android">
 </picture>
 
 I have a Xiaomi Note 5 Pro with bootloader unlocked. Xiaomi phones have an exceptional
