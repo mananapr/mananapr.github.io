@@ -1,0 +1,33 @@
+<!DOCTYPE html><html lang=en><head><meta name="description" content="I like to dream"/><link href="data:image/png;base64," rel=icon type="image/png"><title>mnnpr</title><meta name=viewport content="width=device-width"><style>body{overflow-y:scroll;font-family:sans-serif}img,main,pre>code{display:block;margin:25px auto}main{padding:20px;max-width:600px;line-height:1.6;word-wrap:break-word}img{max-width:100%}pre>code{padding:20px;white-space:pre-wrap}code{background:#eee;padding:2px}blockquote{border-left:7px solid #ddd;padding:0 14px;color:#666;margin:0}h1,h2,h3,h4{line-height:1.2}hr{border:2px solid #ddd}</style></head><body><main><a href='/'>mnnpr</a><h1 id="services-i-self-host">Services I Self Host</h1>
+<p>Recently, I invested in a VPS to self host a few services in order move away from proprietary services like Google for eg. I bought a <code>Hetzner</code> Cloud VPS because they are based in Germany and hence follow EU data protection laws. I got my hostname from <code>namecheap</code> for dirt cheap :)</p>
+<h2 id="list-of-servies">List of Servies</h2>
+<ul>
+<li>Cloud</li>
+<li>Email</li>
+<li>IRC Client</li>
+<li>This blog and other Webservices</li>
+</ul>
+<h2 id="cloud">Cloud</h2>
+<p>I self host <code>Nextcloud</code> to get a personal cloud storage with features like Office, Notes, Contacts &amp; Calendar.</p>
+<p>On android, I have <code>DAVx5</code> installed to sync my contacts and calendar with Nextcloud instance using <code>CalDAV</code> and <code>WebDAV</code>. To sync my notes, <code>Orgzly</code> has an option to sync using a remote <code>WebDAV</code> repo which does the job. I also have an <code>Collabra Office</code> server that is configured to work with Nextcloud. This makes a pretty good alternative to the GDocs Suite.</p>
+<p>Sadly, <code>Nextcloud</code> doesn&#x2019;t has an official cli client. Therefore, I use <code>rclone</code> with WebDAV to manage my cloud from the cli.</p>
+<h2 id="email">Email</h2>
+<p>If you&#x2019;ve ever tried hosting an email server, you know it&#x2019;s a real pain in the ass. There are a lot of moving parts in a mail server and on top of that, you also have to configure things like <code>SPF</code>, <code>DMIK</code> and <code>DMARC</code> so that your mails don&#x2019;t get marked as spam. This has been the most headache inducing part of my self hosting experience to be honest.</p>
+<p>I use the <code>Postfix</code> + <code>Dovecot</code> + <code>MariaDB</code> + <code>OpenDKIM</code> stack to send and recieve mails. I haven&#x2019;t installed a webclient like <code>Roundcube</code> or <code>Rainloop</code> because it&#x2019;s extra headache. The SMTP and IMAP services can be used using any mail client so that&#x2019;s not an issue.</p>
+<p>On Android I use <code>K9-Mail</code> and on my laptop I just use Nextcloud&#x2019;s Email app.</p>
+<h2 id="blog">Blog</h2>
+<p>I use <code>nginx</code> to serve this blog with <code>ssl</code>. The certificates were generated using <code>LetsEncrypt</code>. The certificates are valid for this blog, my mail and nextcloud.</p>
+<p>To generate these html pages, I use a simple bash script that compiles markdown to html using <code>pandoc</code>. The script can be found at the blog&#x2019;s github repo which I will link in the sources.</p>
+<h2 id="irc">IRC</h2>
+<p>I run <code>weechat</code> in a <code>screen</code> instance so that I am always logged into the IRC channels. Earlier, I used to use my Raspberry Pi for this but now I have migrated to my VPS due to better uptime.</p>
+<hr />
+<p>Sources:</p>
+<ul>
+<li><code>Hetzner</code>: <a href="https://www.hetzner.com/" class="uri">https://www.hetzner.com/</a></li>
+<li><code>Namecheap</code>: <a href="https://www.namecheap.com/" class="uri">https://www.namecheap.com/</a></li>
+<li><code>Nextcloud</code>: <a href="https://nextcloud.com/" class="uri">https://nextcloud.com/</a></li>
+<li><code>Postfix</code>: <a href="http://www.postfix.org/" class="uri">http://www.postfix.org/</a></li>
+<li><code>Dovecot</code>: <a href="https://www.dovecot.org/" class="uri">https://www.dovecot.org/</a></li>
+<li><code>rclone</code>: <a href="https://rclone.org/" class="uri">https://rclone.org/</a></li>
+<li><code>Blog</code>: <a href="https://github.com/mananapr/blog" class="uri">https://github.com/mananapr/blog</a></li>
+</ul></main></body></html>
