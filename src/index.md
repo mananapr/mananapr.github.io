@@ -2,6 +2,7 @@
 
 **posts**
 
+- [self hosting](/selfhosting.html)
 - [android](/android.html)
 - [kiss](/kiss.html)
 - [vim](/vim.html)

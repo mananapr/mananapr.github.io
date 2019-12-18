@@ -1,8 +1,10 @@
 # Services I Self Host
 
 Recently, I invested in a VPS to self host a few services in order move away from
-proprietary services like Google for eg. I bought a `Hetzner` Cloud VPS because they are
-based in Germany and hence follow EU data protection laws. I got my hostname from `namecheap`
+proprietary services like Google.
+
+I bought a `Hetzner` Cloud VPS because they are
+based in Germany and hence follow EU data protection laws. I got my domain from `namecheap`
 for dirt cheap :)
 
 ## List of Servies
