@@ -4,6 +4,7 @@
 <ul>
 <li>Cloud</li>
 <li>Email</li>
+<li>Paste Service</li>
 <li>IRC Client</li>
 <li>This blog and other Webservices</li>
 </ul>
@@ -15,8 +16,12 @@
 <p>If you&#x2019;ve ever tried hosting an email server, you know it&#x2019;s a real pain in the ass. There are a lot of moving parts in a mail server and on top of that, you also have to configure things like <code>SPF</code>, <code>DMIK</code> and <code>DMARC</code> so that your mails don&#x2019;t get marked as spam. This has been the most headache inducing part of my self hosting experience to be honest.</p>
 <p>I use the <code>Postfix</code> + <code>Dovecot</code> + <code>MariaDB</code> + <code>OpenDKIM</code> stack to send and recieve mails. I haven&#x2019;t installed a webclient like <code>Roundcube</code> or <code>Rainloop</code> because it&#x2019;s extra headache. The SMTP and IMAP services can be used using any mail client so that&#x2019;s not an issue.</p>
 <p>On Android I use <code>K9-Mail</code> and on my laptop I just use Nextcloud&#x2019;s Email app.</p>
+<h2 id="paste-service">Paste Service</h2>
+<p>I&#x2019;ve always wanted a simple pastebin service that is terminal friendly. <code>fiche</code> is a simple pastebin service that I found which allows users to send information to it using netcat. So a simple,</p>
+<pre><code>    echo just testing! | nc paste.mananapr.xyz 9999</code></pre>
+<p>is what I need to do. As I can pipe anything into <code>netcat</code>, this makes pasting things so much easier.</p>
 <h2 id="blog">Blog</h2>
-<p>I use <code>nginx</code> to serve this blog with <code>ssl</code>. The certificates were generated using <code>LetsEncrypt</code>. The certificates are valid for this blog, my mail and nextcloud.</p>
+<p>I use <code>nginx</code> to serve this blog with <code>ssl</code>. The certificates were generated using <code>LetsEncrypt</code>. The certificates are valid for this blog, my mail, fiche and nextcloud.</p>
 <p>To generate these html pages, I use a simple bash script that compiles markdown to html using <code>pandoc</code>. The script can be found at the blog&#x2019;s github repo which I will link in the sources.</p>
 <h2 id="irc">IRC</h2>
 <p>I run <code>weechat</code> in a <code>screen</code> instance so that I am always logged into the IRC channels. Earlier, I used to use my Raspberry Pi for this but now I have migrated to my VPS due to better uptime.</p>
@@ -26,6 +31,7 @@
 <li><code>Hetzner</code>: <a href="https://www.hetzner.com/" class="uri">https://www.hetzner.com/</a></li>
 <li><code>Namecheap</code>: <a href="https://www.namecheap.com/" class="uri">https://www.namecheap.com/</a></li>
 <li><code>Nextcloud</code>: <a href="https://nextcloud.com/" class="uri">https://nextcloud.com/</a></li>
+<li><code>fiche</code>: <a href="https://github.com/solusipse/fiche" class="uri">https://github.com/solusipse/fiche</a></li>
 <li><code>Postfix</code>: <a href="http://www.postfix.org/" class="uri">http://www.postfix.org/</a></li>
 <li><code>Dovecot</code>: <a href="https://www.dovecot.org/" class="uri">https://www.dovecot.org/</a></li>
 <li><code>rclone</code>: <a href="https://rclone.org/" class="uri">https://rclone.org/</a></li>

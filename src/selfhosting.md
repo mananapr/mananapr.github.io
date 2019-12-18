@@ -9,6 +9,7 @@ for dirt cheap :)
 
  - Cloud
  - Email
+ - Paste Service
  - IRC Client
  - This blog and other Webservices
 
@@ -36,10 +37,21 @@ services can be used using any mail client so that's not an issue.
 
 On Android I use `K9-Mail` and on my laptop I just use Nextcloud's Email app.
 
+## Paste Service
+
+I've always wanted a simple pastebin service that is terminal friendly.
+`fiche` is a simple pastebin service that I found which allows users
+to send information to it using netcat. So a simple,
+```
+    echo just testing! | nc paste.mananapr.xyz 9999
+```
+is what I need to do. As I can pipe anything into `netcat`, this makes pasting
+things so much easier.
+
 ## Blog
 
 I use `nginx` to serve this blog with `ssl`. The certificates were generated using `LetsEncrypt`.
-The certificates are valid for this blog, my mail and nextcloud.
+The certificates are valid for this blog, my mail, fiche and nextcloud.
 
 To generate these html pages, I use a simple bash script that compiles markdown to html using `pandoc`.
 The script can be found at the blog's github repo which I will link in the sources.
@@ -56,6 +68,7 @@ Sources:
 - `Hetzner`: <https://www.hetzner.com/>
 - `Namecheap`: <https://www.namecheap.com/>
 - `Nextcloud`: <https://nextcloud.com/>
+- `fiche`: <https://github.com/solusipse/fiche>
 - `Postfix`: <http://www.postfix.org/>
 - `Dovecot`: <https://www.dovecot.org/>
 - `rclone`: <https://rclone.org/>
