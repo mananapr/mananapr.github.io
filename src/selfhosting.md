@@ -7,6 +7,13 @@ I bought a `Hetzner` Cloud VPS because they are
 based in Germany and hence follow EU data protection laws. I got my domain from `namecheap`
 for dirt cheap :)
 
+I also like how I can customize and personalize the self hosted services to my needs.
+For example, the following picture shows my login page for NextCloud.
+
+<picture>
+  <img src="/images/selfhosted_nextcloud1.png" alt="nextcloud">
+</picture>
+
 ## List of Servies
 
  - Cloud
@@ -25,6 +32,10 @@ To sync my notes, `Orgzly` has an option to sync using a remote `WebDAV` repo wh
 I also have an `Collabra Office` server that is configured to work with Nextcloud. This makes a pretty good alternative to the GDocs Suite.
 
 Sadly, `Nextcloud` doesn't has an official cli client. Therefore, I use `rclone` with WebDAV to manage my cloud from the cli.
+
+<picture>
+  <img src="/images/selfhosted_nextcloud2.png" alt="nextcloud">
+</picture>
 
 ## Email
 
