@@ -11,7 +11,7 @@ I also like how I can customize and personalize the self hosted services to my n
 For example, the following picture shows my login page for NextCloud.
 
 <picture>
-  <img src="/images/selfhosted_nextcloud1.png" alt="nextcloud">
+  <img src="/images/selfhost_nextcloud1.png" alt="nextcloud">
 </picture>
 
 ## List of Servies
@@ -34,7 +34,7 @@ I also have an `Collabra Office` server that is configured to work with Nextclou
 Sadly, `Nextcloud` doesn't has an official cli client. Therefore, I use `rclone` with WebDAV to manage my cloud from the cli.
 
 <picture>
-  <img src="/images/selfhosted_nextcloud2.png" alt="nextcloud">
+  <img src="/images/selfhost_nextcloud2.png" alt="nextcloud">
 </picture>
 
 ## Email

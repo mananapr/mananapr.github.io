@@ -2,7 +2,7 @@
 <p>Recently, I invested in a VPS to self host a few services in order move away from proprietary services like Google.</p>
 <p>I bought a <code>Hetzner</code> Cloud VPS because they are based in Germany and hence follow EU data protection laws. I got my domain from <code>namecheap</code> for dirt cheap :)</p>
 <p>I also like how I can customize and personalize the self hosted services to my needs. For example, the following picture shows my login page for NextCloud.</p>
-<p><picture> <img src="/images/selfhosted_nextcloud1.png" alt="nextcloud"> </picture></p>
+<p><picture> <img src="/images/selfhost_nextcloud1.png" alt="nextcloud"> </picture></p>
 <h2 id="list-of-servies">List of Servies</h2>
 <ul>
 <li>Cloud</li>
@@ -15,7 +15,7 @@
 <p>I self host <code>Nextcloud</code> to get a personal cloud storage with features like Office, Notes, Contacts &amp; Calendar.</p>
 <p>On android, I have <code>DAVx5</code> installed to sync my contacts and calendar with Nextcloud instance using <code>CalDAV</code> and <code>WebDAV</code>. To sync my notes, <code>Orgzly</code> has an option to sync using a remote <code>WebDAV</code> repo which does the job. I also have an <code>Collabra Office</code> server that is configured to work with Nextcloud. This makes a pretty good alternative to the GDocs Suite.</p>
 <p>Sadly, <code>Nextcloud</code> doesn&#x2019;t has an official cli client. Therefore, I use <code>rclone</code> with WebDAV to manage my cloud from the cli.</p>
-<p><picture> <img src="/images/selfhosted_nextcloud2.png" alt="nextcloud"> </picture></p>
+<p><picture> <img src="/images/selfhost_nextcloud2.png" alt="nextcloud"> </picture></p>
 <h2 id="email">Email</h2>
 <p>If you&#x2019;ve ever tried hosting an email server, you know it&#x2019;s a real pain in the ass. There are a lot of moving parts in a mail server and on top of that, you also have to configure things like <code>SPF</code>, <code>DMIK</code> and <code>DMARC</code> so that your mails don&#x2019;t get marked as spam. This has been the most headache inducing part of my self hosting experience to be honest.</p>
 <p>I use the <code>Postfix</code> + <code>Dovecot</code> + <code>MariaDB</code> + <code>OpenDKIM</code> stack to send and recieve mails. I haven&#x2019;t installed a webclient like <code>Roundcube</code> or <code>Rainloop</code> because it&#x2019;s extra headache. The SMTP and IMAP services can be used using any mail client so that&#x2019;s not an issue.</p>
