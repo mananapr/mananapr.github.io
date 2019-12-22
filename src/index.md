@@ -2,6 +2,7 @@
 
 **posts**
 
+- [email server](/email.html)
 - [self hosting](/selfhosting.html)
 - [android](/android.html)
 - [kiss](/kiss.html)
