@@ -14,19 +14,19 @@
 <h2 id="cloud">Cloud</h2>
 <p>I self host <code>Nextcloud</code> to get a personal cloud storage with features like Office, Notes, Contacts &amp; Calendar.</p>
 <p>On android, I have <code>DAVx5</code> installed to sync my contacts and calendar with Nextcloud instance using <code>CalDAV</code> and <code>WebDAV</code>. To sync my notes, <code>Orgzly</code> has an option to sync using a remote <code>WebDAV</code> repo which does the job. I also have an <code>Collabra Office</code> server that is configured to work with Nextcloud. This makes a pretty good alternative to the GDocs Suite.</p>
-<p>Sadly, <code>Nextcloud</code> doesn't has an official cli client. Therefore, I use <code>rclone</code> with WebDAV to manage my cloud from the cli.</p>
+<p>Sadly, <code>Nextcloud</code> doesn&#x2019;t has an official cli client. Therefore, I use <code>rclone</code> with WebDAV to manage my cloud from the cli.</p>
 <p><picture> <img src="/images/selfhost_nextcloud2.png" alt="nextcloud"> </picture></p>
 <h2 id="email">Email</h2>
-<p>If you've ever tried hosting an email server, you know it's a real pain in the ass. There are a lot of moving parts in a mail server and on top of that, you also have to configure things like <code>SPF</code>, <code>DMIK</code> and <code>DMARC</code> so that your mails don't get marked as spam. This has been the most headache inducing part of my self hosting experience to be honest.</p>
-<p>I use the <code>Postfix</code> + <code>Dovecot</code> + <code>MariaDB</code> + <code>OpenDKIM</code> stack to send and recieve mails. I haven't installed a webclient like <code>Roundcube</code> or <code>Rainloop</code> because it's extra headache. The SMTP and IMAP services can be used using any mail client so that's not an issue.</p>
-<p>On Android I use <code>K9-Mail</code> and on my laptop I just use Nextcloud's Email app.</p>
+<p>If you&#x2019;ve ever tried hosting an email server, you know it&#x2019;s a real pain in the ass. There are a lot of moving parts in a mail server and on top of that, you also have to configure things like <code>SPF</code>, <code>DMIK</code> and <code>DMARC</code> so that your mails don&#x2019;t get marked as spam. This has been the most headache inducing part of my self hosting experience to be honest.</p>
+<p>I use the <code>Postfix</code> + <code>Dovecot</code> + <code>MariaDB</code> + <code>OpenDKIM</code> stack to send and recieve mails. I haven&#x2019;t installed a webclient like <code>Roundcube</code> or <code>Rainloop</code> because it&#x2019;s extra headache. The SMTP and IMAP services can be used using any mail client so that&#x2019;s not an issue.</p>
+<p>On Android I use <code>K9-Mail</code> and on my laptop I just use Nextcloud&#x2019;s Email app.</p>
 <h2 id="paste-service">Paste Service</h2>
-<p>I've always wanted a simple pastebin service that is terminal friendly. <code>fiche</code> is a simple pastebin service that I found which allows users to send information to it using netcat. So a simple,</p>
+<p>I&#x2019;ve always wanted a simple pastebin service that is terminal friendly. <code>fiche</code> is a simple pastebin service that I found which allows users to send information to it using netcat. So a simple,</p>
 <pre><code>    echo just testing! | nc paste.mananapr.xyz 9999</code></pre>
 <p>is what I need to do. As I can pipe anything into <code>netcat</code>, this makes pasting things so much easier.</p>
 <h2 id="blog">Blog</h2>
 <p>I use <code>nginx</code> to serve this blog with <code>ssl</code>. The certificates were generated using <code>LetsEncrypt</code>. The certificates are valid for this blog, my mail, fiche and nextcloud.</p>
-<p>To generate these html pages, I use a simple bash script that compiles markdown to html using <code>pandoc</code>. The script can be found at the blog's github repo which I will link in the sources.</p>
+<p>To generate these html pages, I use a simple bash script that compiles markdown to html using <code>pandoc</code>. The script can be found at the blog&#x2019;s github repo which I will link in the sources.</p>
 <h2 id="irc">IRC</h2>
 <p>I run <code>weechat</code> in a <code>screen</code> instance so that I am always logged into the IRC channels. Earlier, I used to use my Raspberry Pi for this but now I have migrated to my VPS due to better uptime.</p>
 <hr />

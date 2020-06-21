@@ -4,7 +4,7 @@
   <img src="/images/consoomer.png" alt="consoomer">
 </picture>
 
-The internet has become rather inconvinient these days filled with ads, tracking, paywalls and what not.
+The internet has become rather inconvenient these days filled with ads, tracking, paywalls and what not.
 So I thought I'd make some sort of a guide about how to *consoom* effectively on the modern web.
 
 Luke Smith also did a video on RSS recently which I'll link in the sources. You should watch that as well.
@@ -22,10 +22,10 @@ Using dynamic filtering, you can block 3rd party scripts and 3rd party frames bu
 This will break a lot of websites but there are some workarounds you can try.
 For example, I just use firefox's reader mode to get a readable and nicely formatted page whenever some website breaks on me.
 
-You might also want to use a search engine that's not owned by your email provider. I use a searx instance (which I'll not disclose) which works perfectly.
+You might also want to use a search engine that's not owned by your email provider. I use a `Searx` instance (which I'll not disclose) which works perfectly.
 Also consider using the Tor Browser for websites that don't require login if you want to improve your privacy.
 
-## Part 2 - Dealing with Soical Media Crap
+## Part 2 - Dealing with Social Media Crap
 
 In this part I'll be going over some popular social media sites that just won't work without JavaScript and how you can get around that.
 
@@ -58,7 +58,7 @@ It even provides and option to get RSS Feeds for a user. Plus you don't have to 
 Like `Invidious` is for Youtube and `Nitter` is for Twitter, `Bibliogram` is for Instagram and it's awesome!
 You can just right click on any image and save it in it's original resolution without any hassle.
 Most of the Bibliogram instances have been blocked by Instagram, so you'll have to use a userscript that unblocks it.
-I personally use the `https://bibliogram.pussthecat.org` instance becuase it has dark mode on by default.
+I personally use the `https://bibliogram.pussthecat.org` instance because it has dark mode on by default.
 
 As anyone can selfhost an instance of these webapps, hidden services are also available which enables Tor Browser users to safely use these sites as well.
 
@@ -87,7 +87,7 @@ If you don't want to install Firefox, you can install `UntrackMe` app from F-Dro
 
 I don't like any of these sites. I would actually use them had they not implemented DRM and other crap in their service.
 Even though you are paying for it, you can't *consoom* it how you like. You are tied to their platform where they track you, profile you and sell that to advertisers.
-Further, the quality they provides is meh (Except Amazon Prime I guess, Amazon WebDLs look pretty good).
+Further, the quality they provides is meh (Except Amazon Prime I guess - Amazon WebDLs look pretty good).
 
 I don't like BluRays either. They have amazing quality but they have other problems. Firstly, these discs are region locked. There are 3 Regions - A, B and C.
 So, a BluRay player for Region A discs won't be able to play Region B discs or Region C discs. On top of that, some movies are only available in one region. So, yeah.
@@ -108,7 +108,7 @@ So lets talk about some alternatives -
 What's so great about `QxR` you ask? -
 
 - Glorious HEVC Encodes
-- They include Bluray Featurretes with their releases
+- They include BluRay Featurettes with their releases
 - Encodes are not bloated and still look great
 
 If `QxR` has a release for something you are looking just go with them. There's also another encoder called `Prof` (who also uploads on `1337x`) and his encodes are great as well.
@@ -122,8 +122,8 @@ If you are looking for Anime, `Prof` does that as well but you might wanna head 
   <img src="/images/rutracker.png" alt="rutracker">
 </picture>
 
-`Rutracker` is a russian torrent tracker that has **LOTS** of Music of all sorts. Most of it is high bitrate as well.
-The site is mostly in russian so it can be a little hard to navigate if you are looking for something specific.
+`Rutracker` is a Russian torrent tracker that has **LOTS** of Music of all sorts. Most of it is high bitrate as well.
+The site is mostly in Russian so it can be a little hard to navigate if you are looking for something specific.
 
 If you don't care about bitrate you can use Youtube as well I guess.
 
@@ -132,6 +132,7 @@ If you don't care about bitrate you can use Youtube as well I guess.
 Sources:
 
 - `Luke's Video`: <https://invidio.us/watch?v=hMH9w6pyzvU>
+- `Searx Instances`: <https://searx.space/>
 - `Invidious Instances`: <https://github.com/omarroth/invidious/wiki/Invidious-Instances>
 - `Nitter Instances`: <https://github.com/zedeus/nitter/wiki/Instances>
 - `Bibliogram Instances`: <https://github.com/cloudrac3r/bibliogram/wiki/Instances>
@@ -140,4 +141,6 @@ Sources:
 - `NewPipe`: <https://github.com/TeamNewPipe/NewPipe/releases>
 - `QxR`: <https://1337x.to/user/QxR/>
 - `Prof`: <https://1337x.to/user/Prof/>
+- `CTR`: <https://nyaa.si/user/Catar>
+- `VCB-Studio` <https://nyaa.si/user/VCB-Studio>
 - `Rutracker`: <https://rutracker.org/forum/index.php>

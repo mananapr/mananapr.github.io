@@ -1,58 +1,59 @@
 <!DOCTYPE html><html lang=en><head><meta name="description" content="I like to dream"/><link href="data:image/png;base64," rel=icon type="image/png"><title>mnnpr</title><meta name=viewport content="width=device-width"><style>body{overflow-y:scroll;font-family:sans-serif}img,main,pre>code{display:block;margin:25px auto}main{padding:20px;max-width:600px;line-height:1.6;word-wrap:break-word}img{max-width:100%}pre>code{padding:20px;white-space:pre-wrap}code{background:#eee;padding:2px}blockquote{border-left:7px solid #ddd;padding:0 14px;color:#666;margin:0}h1,h2,h3,h4{line-height:1.2}hr{border:2px solid #ddd}</style></head><body><main><a href='/'>mnnpr</a><h1 id="how-to-consoom-on-the-internet">How to Consoom on the Internet</h1>
 <p><picture> <img src="/images/consoomer.png" alt="consoomer"> </picture></p>
-<p>The internet has become rather inconvinient these days filled with ads, tracking, paywalls and what not. So I thought I'd make some sort of a guide about how to <em>consoom</em> effectively on the modern web.</p>
-<p>Luke Smith also did a video on RSS recently which I'll link in the sources. You should watch that as well. Think of this post as more of a companion piece for that video.</p>
+<p>The internet has become rather inconvenient these days filled with ads, tracking, paywalls and what not. So I thought I&#x2019;d make some sort of a guide about how to <em>consoom</em> effectively on the modern web.</p>
+<p>Luke Smith also did a video on RSS recently which I&#x2019;ll link in the sources. You should watch that as well. Think of this post as more of a companion piece for that video.</p>
 <h2 id="part-1---the-basics">Part 1 - The Basics</h2>
 <p>In this part I would just be going over some of the basic things you should be doing while browsing the web.</p>
-<p>Firstly, install <code>uBlock Origin</code> in your browser if you don't have it installed already. This is the least you can do. All other Ad Blockers are crap and have relationships with some 3rd party advertisers and hence allow some ads to pass through.</p>
-<p>If you are willing to put in some extra effort, set up dynamic filtering in uBlock as well. I'll link the wiki in the sources. Using dynamic filtering, you can block 3rd party scripts and 3rd party frames but I also block first party scripts as well. This will break a lot of websites but there are some workarounds you can try. For example, I just use firefox's reader mode to get a readable and nicely formatted page whenever some website breaks on me.</p>
-<p>You might also want to use a search engine that's not owned by your email provider. I use a searx instance (which I'll not disclose) which works perfectly. Also consider using the Tor Browser for websites that don't require login if you want to improve your privacy.</p>
-<h2 id="part-2---dealing-with-soical-media-crap">Part 2 - Dealing with Soical Media Crap</h2>
-<p>In this part I'll be going over some popular social media sites that just won't work without JavaScript and how you can get around that.</p>
+<p>Firstly, install <code>uBlock Origin</code> in your browser if you don&#x2019;t have it installed already. This is the least you can do. All other Ad Blockers are crap and have relationships with some 3rd party advertisers and hence allow some ads to pass through.</p>
+<p>If you are willing to put in some extra effort, set up dynamic filtering in uBlock as well. I&#x2019;ll link the wiki in the sources. Using dynamic filtering, you can block 3rd party scripts and 3rd party frames but I also block first party scripts as well. This will break a lot of websites but there are some workarounds you can try. For example, I just use firefox&#x2019;s reader mode to get a readable and nicely formatted page whenever some website breaks on me.</p>
+<p>You might also want to use a search engine that&#x2019;s not owned by your email provider. I use a <code>Searx</code> instance (which I&#x2019;ll not disclose) which works perfectly. Also consider using the Tor Browser for websites that don&#x2019;t require login if you want to improve your privacy.</p>
+<h2 id="part-2---dealing-with-social-media-crap">Part 2 - Dealing with Social Media Crap</h2>
+<p>In this part I&#x2019;ll be going over some popular social media sites that just won&#x2019;t work without JavaScript and how you can get around that.</p>
 <h3 id="invidious">Invidious</h3>
 <p><picture> <img src="/images/invidious.png" alt="invidious"> </picture></p>
 <p><code>Invidious</code> is a FOSS web application that acts as a proxy to YouTube and provides an alternative front-end that works without JavaScript. You can even subscribe to channels without signing in to Google - how cool is that?</p>
 <p>On top of that, you get extra features like Reddit Comments, Audio Only Mode and Video/Audio Downloads.</p>
 <h3 id="nitter">Nitter</h3>
 <p><picture> <img src="/images/nitter.png" alt="nitter"> </picture></p>
-<p><code>Nitter</code> is a FOSS web application that provides a clean front-end for Twitter that works without JavaScript. It even provides and option to get RSS Feeds for a user. Plus you don't have to deal with videos automatically playing as you scroll down the page.</p>
+<p><code>Nitter</code> is a FOSS web application that provides a clean front-end for Twitter that works without JavaScript. It even provides and option to get RSS Feeds for a user. Plus you don&#x2019;t have to deal with videos automatically playing as you scroll down the page.</p>
 <h3 id="bibliogram">Bibliogram</h3>
 <p><picture> <img src="/images/bibliogram.png" alt="bibliogram"> </picture></p>
-<p>Like <code>Invidious</code> is for Youtube and <code>Nitter</code> is for Twitter, <code>Bibliogram</code> is for Instagram and it's awesome! You can just right click on any image and save it in it's original resolution without any hassle. Most of the Bibliogram instances have been blocked by Instagram, so you'll have to use a userscript that unblocks it. I personally use the <code>https://bibliogram.pussthecat.org</code> instance becuase it has dark mode on by default.</p>
+<p>Like <code>Invidious</code> is for Youtube and <code>Nitter</code> is for Twitter, <code>Bibliogram</code> is for Instagram and it&#x2019;s awesome! You can just right click on any image and save it in it&#x2019;s original resolution without any hassle. Most of the Bibliogram instances have been blocked by Instagram, so you&#x2019;ll have to use a userscript that unblocks it. I personally use the <code>https://bibliogram.pussthecat.org</code> instance because it has dark mode on by default.</p>
 <p>As anyone can selfhost an instance of these webapps, hidden services are also available which enables Tor Browser users to safely use these sites as well.</p>
 <h3 id="bringing-it-all-together">Bringing it all together</h3>
 <p>Having to manually change the URLs each time is not practical. So you can install the <code>Privacy Redirect</code> extension available for Firefox and Chromium. This extensions will automatically redirect these social media links to the alternative frontends mentioned above. It can also replace youtube embeds with invidious embeds and it also redirects google maps links to openstreetmaps links. Plus, it can even be customized to redirect to particular instances of these webapps and in case of invidious, it also has an option to enable dark mode automatically.</p>
-<p>While you're at it, also install the <code>Old Reddit Redirect</code> extension to save yourself from the cancer that is Reddit Redesign.</p>
+<p>While you&#x2019;re at it, also install the <code>Old Reddit Redirect</code> extension to save yourself from the cancer that is Reddit Redesign.</p>
 <blockquote>
-<pre><code>What If I mostly consoom content on my smartphone?</code></pre>
+What If I mostly consoom content on my smartphone?
 </blockquote>
 <p>If you are using Android, just install firefox (or a firefox fork like Icecat or Fennec) and install the <code>Privacy Redirect</code> extension on it. As these are Progressive Webapps, you can save them in your app drawer as regular apps as well.</p>
-<p>You don't need to worry about <code>Invidious</code> because you can install a FOSS app called <code>NewPipe</code> which provides a mobile friendly interface to <code>Invidious</code>. On top of that, it adds things that are a part of Youtube Premium and it does all of that for free. It also has support for SoundCloud as well if you use that. Even though <code>NewPipe</code> is available on F-Droid, I would recommend you download the APK from their Github Releases page (linked at the bottom) because that will receive instant updates.</p>
-<p>If you don't want to install Firefox, you can install <code>UntrackMe</code> app from F-Droid. This will provide the same functionality and work irrespective of what browser you use.</p>
+<p>You don&#x2019;t need to worry about <code>Invidious</code> because you can install a FOSS app called <code>NewPipe</code> which provides a mobile friendly interface to <code>Invidious</code>. On top of that, it adds things that are a part of Youtube Premium and it does all of that for free. It also has support for SoundCloud as well if you use that. Even though <code>NewPipe</code> is available on F-Droid, I would recommend you download the APK from their Github Releases page (linked at the bottom) because that will receive instant updates.</p>
+<p>If you don&#x2019;t want to install Firefox, you can install <code>UntrackMe</code> app from F-Droid. This will provide the same functionality and work irrespective of what browser you use.</p>
 <h2 id="part-3---spotify-netflix-and-other-similar-trash">Part 3 - Spotify, Netflix and Other Similar Trash</h2>
-<p>I don't like any of these sites. I would actually use them had they not implemented DRM and other crap in their service. Even though you are paying for it, you can't <em>consoom</em> it how you like. You are tied to their platform where they track you, profile you and sell that to advertisers. Further, the quality they provides is meh (Except Amazon Prime I guess, Amazon WebDLs look pretty good).</p>
-<p>I don't like BluRays either. They have amazing quality but they have other problems. Firstly, these discs are region locked. There are 3 Regions - A, B and C. So, a BluRay player for Region A discs won't be able to play Region B discs or Region C discs. On top of that, some movies are only available in one region. So, yeah. To make matters worse, these BluRay discs have a 10-15minute long <strong>unskippable</strong> section about Piracy and what not. So you need see that first each time you try to watch a movie.</p>
-<p>Just to mention, there is a good bluray company called Criterion that sells region free BluRays and remasters some old films but ofcourse they don't have everything.</p>
+<p>I don&#x2019;t like any of these sites. I would actually use them had they not implemented DRM and other crap in their service. Even though you are paying for it, you can&#x2019;t <em>consoom</em> it how you like. You are tied to their platform where they track you, profile you and sell that to advertisers. Further, the quality they provides is meh (Except Amazon Prime I guess - Amazon WebDLs look pretty good).</p>
+<p>I don&#x2019;t like BluRays either. They have amazing quality but they have other problems. Firstly, these discs are region locked. There are 3 Regions - A, B and C. So, a BluRay player for Region A discs won&#x2019;t be able to play Region B discs or Region C discs. On top of that, some movies are only available in one region. So, yeah. To make matters worse, these BluRay discs have a 10-15minute long <strong>unskippable</strong> section about Piracy and what not. So you need see that first each time you try to watch a movie.</p>
+<p>Just to mention, there is a good bluray company called Criterion that sells region free BluRays and remasters some old films but ofcourse they don&#x2019;t have everything.</p>
 <p>So lets talk about some alternatives -</p>
 <h3 id="x-and-the-holy-church-of-qxr">1337x and The Holy Church of QxR</h3>
 <p><picture> <img src="/images/1337x.png" alt="1337x"> </picture></p>
 <p><code>1337x</code> is a torrent aggregator (just like the <code>The Pirate Bay</code>) which is officially used by an encoding group called <code>QxR</code>.</p>
-<p>What's so great about <code>QxR</code> you ask? -</p>
+<p>What&#x2019;s so great about <code>QxR</code> you ask? -</p>
 <ul>
 <li>Glorious HEVC Encodes</li>
-<li>They include Bluray Featurretes with their releases</li>
+<li>They include BluRay Featurettes with their releases</li>
 <li>Encodes are not bloated and still look great</li>
 </ul>
-<p>If <code>QxR</code> has a release for something you are looking just go with them. There's also another encoder called <code>Prof</code> (who also uploads on <code>1337x</code>) and his encodes are great as well. (Although some of his encodes border on being bloated).</p>
+<p>If <code>QxR</code> has a release for something you are looking just go with them. There&#x2019;s also another encoder called <code>Prof</code> (who also uploads on <code>1337x</code>) and his encodes are great as well. (Although some of his encodes border on being bloated).</p>
 <p>If you are looking for Anime, <code>Prof</code> does that as well but you might wanna head to <code>nyaa.si</code> and look for <code>CTR</code> or <code>VCB-Studio</code> releases.</p>
 <h3 id="rutracker---cheeki-breeki-music-awesomeness">Rutracker - Cheeki Breeki Music Awesomeness</h3>
 <p><picture> <img src="/images/rutracker.png" alt="rutracker"> </picture></p>
-<p><code>Rutracker</code> is a russian torrent tracker that has <strong>LOTS</strong> of Music of all sorts. Most of it is high bitrate as well. The site is mostly in russian so it can be a little hard to navigate if you are looking for something specific.</p>
-<p>If you don't care about bitrate you can use Youtube as well I guess.</p>
+<p><code>Rutracker</code> is a Russian torrent tracker that has <strong>LOTS</strong> of Music of all sorts. Most of it is high bitrate as well. The site is mostly in Russian so it can be a little hard to navigate if you are looking for something specific.</p>
+<p>If you don&#x2019;t care about bitrate you can use Youtube as well I guess.</p>
 <hr />
 <p>Sources:</p>
 <ul>
 <li><code>Luke's Video</code>: <a href="https://invidio.us/watch?v=hMH9w6pyzvU" class="uri">https://invidio.us/watch?v=hMH9w6pyzvU</a></li>
+<li><code>Searx Instances</code>: <a href="https://searx.space/" class="uri">https://searx.space/</a></li>
 <li><code>Invidious Instances</code>: <a href="https://github.com/omarroth/invidious/wiki/Invidious-Instances" class="uri">https://github.com/omarroth/invidious/wiki/Invidious-Instances</a></li>
 <li><code>Nitter Instances</code>: <a href="https://github.com/zedeus/nitter/wiki/Instances" class="uri">https://github.com/zedeus/nitter/wiki/Instances</a></li>
 <li><code>Bibliogram Instances</code>: <a href="https://github.com/cloudrac3r/bibliogram/wiki/Instances" class="uri">https://github.com/cloudrac3r/bibliogram/wiki/Instances</a></li>
@@ -61,5 +62,7 @@
 <li><code>NewPipe</code>: <a href="https://github.com/TeamNewPipe/NewPipe/releases" class="uri">https://github.com/TeamNewPipe/NewPipe/releases</a></li>
 <li><code>QxR</code>: <a href="https://1337x.to/user/QxR/" class="uri">https://1337x.to/user/QxR/</a></li>
 <li><code>Prof</code>: <a href="https://1337x.to/user/Prof/" class="uri">https://1337x.to/user/Prof/</a></li>
+<li><code>CTR</code>: <a href="https://nyaa.si/user/Catar" class="uri">https://nyaa.si/user/Catar</a></li>
+<li><code>VCB-Studio</code> <a href="https://nyaa.si/user/VCB-Studio" class="uri">https://nyaa.si/user/VCB-Studio</a></li>
 <li><code>Rutracker</code>: <a href="https://rutracker.org/forum/index.php" class="uri">https://rutracker.org/forum/index.php</a></li>
 </ul></main></body></html>

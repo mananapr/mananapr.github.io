@@ -9,24 +9,24 @@
 <li>LetsEncrypt/Certbot for SSL Certificates</li>
 </ul>
 <h2 id="dns-settings">DNS Settings</h2>
-<p>For the entirety of this post, I am going to assume that your domain is <code>yourdomain.com</code>. Open up your DNS provider's dashboard and create a new MX record as follows:</p>
+<p>For the entirety of this post, I am going to assume that your domain is <code>yourdomain.com</code>. Open up your DNS provider&#x2019;s dashboard and create a new MX record as follows:</p>
 <pre><code>mail.yourdomain.com    MX      10      YOUREXTERNALIPADDRESS</code></pre>
 <h2 id="installing-packages">Installing Packages</h2>
-<p>Next, We'll install the packages I mentioned above by running:</p>
+<p>Next, We&#x2019;ll install the packages I mentioned above by running:</p>
 <pre><code>sudo apt-get install certbot postfix postfix-mysql dovecot-core dovecot-imapd dovecot-pop3d dovecot-lmtpd dovecot-mysql mariadb-server</code></pre>
-<p>While installation, you'll be prompted to enter a password for the root MySQL user as well as set a configuration type for Postfix (Go with Internet Site).</p>
+<p>While installation, you&#x2019;ll be prompted to enter a password for the root MySQL user as well as set a configuration type for Postfix (Go with Internet Site).</p>
 <h2 id="generating-ssl-certificates">Generating SSL Certificates</h2>
-<p>We'll be generating SSL certificates using Certbot/LetsEncypt. To generate the ceritificates, run:</p>
+<p>We&#x2019;ll be generating SSL certificates using Certbot/LetsEncypt. To generate the ceritificates, run:</p>
 <pre><code>sudo certbot -d yourdomain.com -d mail.yourdomain.com</code></pre>
 <p>To automatically renew the certificates, you can set a cronjob for <code>cerbot renew</code>.</p>
 <h2 id="configuring-mariadb">Configuring MariaDB</h2>
-<p>We have to create a database that will have tables for domains, email addresses/passwords and email aliases. We'll also create a dedicated MySQL user for Postfix and Dovecot.</p>
+<p>We have to create a database that will have tables for domains, email addresses/passwords and email aliases. We&#x2019;ll also create a dedicated MySQL user for Postfix and Dovecot.</p>
 <h4 id="creating-the-database-and-tables">Creating the Database and Tables</h4>
 <p>To create the database, run the following command:</p>
 <pre><code>sudo mysqladmin -p create mailserver</code></pre>
 <p>Then login to the MySQL commandline using:</p>
 <pre><code>sudo mysql -p mailserver</code></pre>
-<p>Next, we'll create a new MySQL user (mailuser in this case) by entering the following command:</p>
+<p>Next, we&#x2019;ll create a new MySQL user (mailuser in this case) by entering the following command:</p>
 <pre><code>GRANT SELECT ON mailserver.* TO `mailuser`@`127.0.0.1` IDENTIFIED BY `mailuserpass`;
 FLUSH PRIVILEGES;</code></pre>
 <p>Enter the following command to create a table for the domains that will receive mail on your server:</p>
@@ -35,9 +35,9 @@ FLUSH PRIVILEGES;</code></pre>
 <pre><code>CREATE TABLE `virtual_users` (`id` int(11) NOT NULL auto_increment, `domain_id` int(11) NOT NULL, `password` varchar(106) NOT NULL, `email` varchar(100) NOT NULL, PRIMARY KEY (`id`), UNIQUE KEY `email` (`email`), FOREIGN KEY (domain_id) REFERENCES virtual_domains(id) ON DELETE CASCADE) ENGINE=InnoDB DEFAULT CHARSET=utf8;</code></pre>
 <p>Enter the following command to create a table for your email aliases:</p>
 <pre><code>CREATE TABLE `virtual_aliases` (`id` int(11) NOT NULL auto_increment,`domain_id` int(11) NOT NULL,`source` varchar(100) NOT NULL,`destination` varchar(100) NOT NULL,PRIMARY KEY (`id`),FOREIGN KEY (domain_id) REFERENCES virtual_domains(id) ON DELETE CASCADE) ENGINE=InnoDB DEFAULT CHARSET=utf8;</code></pre>
-<p>With this, we're done with creating the tables.</p>
+<p>With this, we&#x2019;re done with creating the tables.</p>
 <h4 id="adding-data">Adding Data</h4>
-<p>Now that we've created the database and tables, we have to add some data in the tables.</p>
+<p>Now that we&#x2019;ve created the database and tables, we have to add some data in the tables.</p>
 <p>Add your domains to the virtual_domains table. You can add as many domains as you want in the VALUES section of the command below:</p>
 <pre><code>INSERT INTO mailserver.virtual_domains (id ,name) VALUES (&#39;1&#39;, &#39;yourdomain.com&#39;), (&#39;2&#39;, &#39;mail.yourdomain.com&#39;);</code></pre>
 <p>Make a note of which id goes with which domain.</p>
@@ -45,7 +45,7 @@ FLUSH PRIVILEGES;</code></pre>
 <pre><code>INSERT INTO mailserver.virtual_users (id, domain_id, password , email) VALUES (&#39;1&#39;, &#39;1&#39;, ENCRYPT(&#39;USERPASSWORD&#39;, CONCAT(&#39;$6$&#39;, SUBSTRING(SHA(RAND()), -16))), &#39;USEREMAIL@yourdomain.com&#39;);</code></pre>
 <p>To add email alias to the virtual_aliases table, run the following query:</p>
 <pre><code>INSERT INTO mailserver.virtual_aliases (id, domain_id, source, destination) VALUES (&#39;1&#39;, &#39;1&#39;, &#39;alias@yourdomain.com&#39;, &#39;USEREMAIL@yourdomain.com&#39;);</code></pre>
-<p>With this, we're finished with the MySQL configuration.</p>
+<p>With this, we&#x2019;re finished with the MySQL configuration.</p>
 <h2 id="postfix-configuration">Postfix Configuration</h2>
 <p>Postfix has two config files: <code>/etc/postfix/main.cf</code> &amp; <code>/etc/postfix/master.cf</code>. I would recommend taking a backup of the original config files before proceeding so that you can undo any changes if things go wrong.</p>
 <p>Start by editing the <code>/etc/postfix/main.cf</code> as shown below:</p>
@@ -114,7 +114,7 @@ query = SELECT destination FROM virtual_aliases WHERE source=&#39;%s</code></pre
 postmap -q email@yourdomain.com mysql:/etc/postfix/mysql-virtual-mailbox-maps.cf
 postmap -q alias@yourdomain.com mysql:/etc/postfix/mysql-virtual-alias-maps.cf</code></pre>
 <p>You should get an output for each of the commands. If nothing is returned, you have some error.</p>
-<p>Now we'll edit the second config file, <code>/etc/postfix/master.cf</code>. Make sure the following lines are uncommented:</p>
+<p>Now we&#x2019;ll edit the second config file, <code>/etc/postfix/master.cf</code>. Make sure the following lines are uncommented:</p>
 <pre><code>smtp      inet  n       -       y       -       -       smtpd
 submission inet n       -       y       -       -       smtpd
 smtps     inet  n       -       y       -       -       smtpd
@@ -132,7 +132,7 @@ smtps     inet  n       -       y       -       -       smtpd
 protocols = imap lmtp
 !include conf.d/*.conf
 !include_try local.conf</code></pre>
-<p>Now we'll configure how dovecot stores the emails. Open <code>/etc/dovecot/conf.d/10-mail.conf</code> and set <code>mail_location</code> as per your preference. I have it set as follows:</p>
+<p>Now we&#x2019;ll configure how dovecot stores the emails. Open <code>/etc/dovecot/conf.d/10-mail.conf</code> and set <code>mail_location</code> as per your preference. I have it set as follows:</p>
 <pre><code>mail_location = maildir:/data/mail/vhosts/%d/%n</code></pre>
 <p><code>%d</code> is the domain and <code>%n</code> is the email id. Make sure the location you provide exists and has the correct permissions. So, in my case,</p>
 <pre><code>sudo mkdir /data/mail
@@ -141,12 +141,12 @@ sudo groupadd -g 5000 vmail
 sudo useradd -g vmail -u 5000 vmail -d /data/mail
 sudo chown -R vmail:vmail /data/mail</code></pre>
 <p>makes the directory and sets correct permissions for the same. The <code>vmail</code> user will be responsible for reading mail from the server.</p>
-<p>Now let's setup authentication in dovecot so that only authenticated users can read the emails. Start by opening <code>/etc/dovecot/conf.d/10-auth.conf</code> and make sure the following variables are setup as shown:</p>
+<p>Now let&#x2019;s setup authentication in dovecot so that only authenticated users can read the emails. Start by opening <code>/etc/dovecot/conf.d/10-auth.conf</code> and make sure the following variables are setup as shown:</p>
 <pre><code>disable_plaintext_auth = yes
 auth_mechanisms = plain login
 #!include auth-system.conf.ext
 !include auth-sql.conf.ext</code></pre>
-<p>Now, let's create <code>/etc/dovecot/conf.d/auth-sql.conf.ext</code> with the authentication information:</p>
+<p>Now, let&#x2019;s create <code>/etc/dovecot/conf.d/auth-sql.conf.ext</code> with the authentication information:</p>
 <pre><code>passdb {
   driver = sql
   args = /etc/dovecot/dovecot-sql.conf.ext
@@ -155,7 +155,7 @@ userdb {
   driver = static
   args = uid=vmail gid=vmail home=/data/mail/vhosts/%d/%n
 }</code></pre>
-<p>We'll also have to update <code>/etc/dovecot/dovecot-sql.conf.ext</code> with our custom MySQL connection information:</p>
+<p>We&#x2019;ll also have to update <code>/etc/dovecot/dovecot-sql.conf.ext</code> with our custom MySQL connection information:</p>
 <pre><code>driver = mysql
 connect = host=127.0.0.1 dbname=mailserver user=mailuser password=mailuserpass
 default_pass_scheme = SHA512-CRYPT
@@ -164,7 +164,7 @@ password_query = SELECT email as user, password FROM virtual_users WHERE email=&
 <pre><code>chown -R vmail:dovecot /etc/dovecot</code></pre>
 <p>Also, change the permissions on the <code>/etc/dovecot/</code> directory by entering the following command:</p>
 <pre><code>chmod -R o-rwx /etc/dovecot</code></pre>
-<p>Next, we'll have to configure LMTP socket for local mail delivery and the auth socket for authentication in <code>/etc/dovecot/conf.d/10-master.conf</code>:</p>
+<p>Next, we&#x2019;ll have to configure LMTP socket for local mail delivery and the auth socket for authentication in <code>/etc/dovecot/conf.d/10-master.conf</code>:</p>
 <pre><code>service imap-login {
   inet_listener imap {
     port = 0
@@ -217,7 +217,7 @@ service auth-worker {
   # $default_internal_user.
   user = vmail
 }</code></pre>
-<p>To configure SSL, we'll have to edit <code>/etc/dovecot/conf.d/10-ssl.conf</code>:</p>
+<p>To configure SSL, we&#x2019;ll have to edit <code>/etc/dovecot/conf.d/10-ssl.conf</code>:</p>
 <pre><code>ssl = required
 ssl_cert = &lt;/etc/letsencrypt/live/yourdomain.com/fullchain.pem
 ssl_key = &lt;/etc/letsencrypt/live/yourdomain.com/privkey.pem
@@ -227,14 +227,14 @@ ssl_protocols = !SSLv2 !SSLv3</code></pre>
 <pre><code>postmaster_address = %d</code></pre>
 <p>Restart dovecot by entering the following command:</p>
 <pre><code>sudo service dovecot restart</code></pre>
-<p>That's It. If email sending and receiving works, then go on to the next part of this guide. Else, check for logs using,</p>
+<p>That&#x2019;s It. If email sending and receiving works, then go on to the next part of this guide. Else, check for logs using,</p>
 <pre><code>sudo tail -f /var/log/mail.log</code></pre>
-<p>There's a catch though - we haven't set up things like <code>SPF</code>, <code>DKIM</code>, <code>DMARC</code> and <code>rDNS</code>. Setting these up makes it possible for the recipient server to verify if the sender is verified or if someone is just spoofing the sender domain. <code>DKIM</code> in particular also lets mail servers detect if your mail has been tampered with in transit. Linode has a great article on this which I'll link to at the bottom.</p>
-<p>It is mandatory to set up SPF, DKM and DMARC if you don't want your emails to go into receiver's spam folder, so follow the linode article linked at the end.</p>
+<p>There&#x2019;s a catch though - we haven&#x2019;t set up things like <code>SPF</code>, <code>DKIM</code>, <code>DMARC</code> and <code>rDNS</code>. Setting these up makes it possible for the recipient server to verify if the sender is verified or if someone is just spoofing the sender domain. <code>DKIM</code> in particular also lets mail servers detect if your mail has been tampered with in transit. Linode has a great article on this which I&#x2019;ll link to at the bottom.</p>
+<p>It is mandatory to set up SPF, DKM and DMARC if you don&#x2019;t want your emails to go into receiver&#x2019;s spam folder, so follow the linode article linked at the end.</p>
 <h2 id="general-tips">General Tips</h2>
 <ul>
 <li>Check if your IP is in blacklists.</li>
-<li>Send an Email to a GMail address. When viewing that mail in GMail, select the &quot;Show Original Message&quot; option. It will show you if your mail passes SPF, DKIM and DMARC.</li>
+<li>Send an Email to a GMail address. When viewing that mail in GMail, select the &#x201C;Show Original Message&#x201D; option. It will show you if your mail passes SPF, DKIM and DMARC.</li>
 <li>Set up Reverse DNS records for your IPv4 address and IPv6 address (if applicable).</li>
 <li>Test your configurations at several online email testers.</li>
 </ul>
