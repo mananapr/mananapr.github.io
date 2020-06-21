@@ -6,7 +6,7 @@
 
 ### December 2019
 - 2019 Dec 22 - [How to host your own Email Service](/email.html)
-- 2019 Dec 18 - [Serives I Self Host](/selfhosting.html)
+- 2019 Dec 18 - [Services I Self Host](/selfhosting.html)
 
 ### November 2019
 - 2019 Nov 28 - [My Bloat-Free Android Setup](/android.html)
