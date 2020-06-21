@@ -1,6 +1,7 @@
 # mnnpr
 
 ### June 2020
+- 2020 Jun 21 - [Android Update](/android_update.html)
 - 2020 Jun 19 - [Some Updates](/updates.html)
 
 ### December 2019
