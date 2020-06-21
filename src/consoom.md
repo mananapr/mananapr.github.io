@@ -106,6 +106,7 @@ So lets talk about some alternatives -
 `1337x` is a torrent aggregator (just like the `The Pirate Bay`) which is officially used by an encoding group called `QxR`.
 
 What's so great about `QxR` you ask? -
+
 - Glorious HEVC Encodes
 - They include Bluray Featurretes with their releases
 - Encodes are not bloated and still look great
