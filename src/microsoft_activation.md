@@ -9,6 +9,10 @@ Even on places like *r/piracy* I found threads where people stood by these appli
 
 So I thought I'd make a post describing the objectively better approach to activate Microsoft Products.
 
+```
+DISCLAMER: This article is only for edutainment purposes. I don't encourage using this information for malicious intent
+```
+
 ## Requirements
 
 - A Server (or another computer on the same network) running Linux
