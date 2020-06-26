@@ -1,0 +1,73 @@
+<!DOCTYPE html><html lang=en><head><meta name="description" content="I like to dream"/><link href="data:image/png;base64," rel=icon type="image/png"><title>mnnpr</title><meta name=viewport content="width=device-width"><style>body{overflow-y:scroll;font-family:sans-serif}img,main,pre>code{display:block;margin:25px auto}main{padding:20px;max-width:600px;line-height:1.6;word-wrap:break-word}img{max-width:100%}pre>code{padding:20px;white-space:pre-wrap}code{background:#eee;padding:2px}blockquote{border-left:7px solid #ddd;padding:0 14px;color:#666;margin:0}h1,h2,h3,h4{line-height:1.2}hr{border:2px solid #ddd}</style></head><body><main><a href='/'>mnnpr</a><pre><code>Before I start with the main content, I would like to clear up a few things -
+
+If you are a Curefit Employee,
+- This article doesn&#39;t promotes piracy or distribution of your content. Anyone who has that kind of intent can just simply record their screens.
+- I myself have never uploaded any of your videos nor do I plan to do so.
+- I&#39;m gonna mention some issues I have with your service, It would be great if you could try to work on them.
+
+If you are a freeloader or a pirate -
+- Don&#39;t bother mailing me to upload the videos somewhere, I&#39;m not gonna reply.
+- Curefit is not really an expensive service so consider paying for it.</code></pre>
+<h1 id="how-i-use-curefit">How I Use Curefit</h1>
+<p>Curefit is a subscription based service that provides follow along fitness and workout videos. The videos are really well made and of all the follow along videos I&#x2019;ve tried, I&#x2019;ve liked them the best.</p>
+<p>That being said, there are 2 major issues I have with the service -</p>
+<ul>
+<li><p>Even though you are paying for the service, you can&#x2019;t watch the videos at your convinience. The sessions are streamed at fixed times and if you get a few minutes late, you can&#x2019;t seek back because it is being live streamed.</p></li>
+<li><p>The video streams are overlayed with distracting bars and numbers I don&#x2019;t care about. And there is no option to disable any of that. On top of that if you forget to turn off your front camera you&#x2019;re gonna have to deal with annoying pop ups that cover the video each time you go out of frame.</p></li>
+</ul>
+<p>So to deal with all of this I decided to find a way to store the live sessions locally so that I can watch them at any time. Also, this would be saving the video in raw format without any of the UI overlays as you can see below -</p>
+<p><picture> <img src="/images/curefit2.png" alt="curefit - no overlays"> </picture></p>
+<p>I will be using Linux and Bash for this but I guess you can also use the Linux Subsystem in Windows. Also keep in mind that this process should work on other live stream platforms as well (unless they are using some sort of DRM).</p>
+<h3 id="getting-the-template-stream-url">Getting the Template Stream URL</h3>
+<p>So firstly, go to the website and start playing the session you would like to download.</p>
+<p>Once it starts playing, open the developer console in your browser (<kbd>Ctrl</kbd> <kbd>Shift</kbd> <kbd>c</kbd> in Firefox). <br> Click on the <code>Network</code> tab and look for URLs that have a format like <code>index_1_XXX.ts?m=XXXXXXXXXX</code>, where <em>X</em> would be any number. Click on that and find the <code>Request URL</code> like shown below -</p>
+<p><picture> <img src="/images/curefit.png" alt="curefit - stream request url"> </picture></p>
+<p>It is going to be different for each stream and will have a format like <code>https://blahblah.cloudfront.net/out/v1/blahblahblah/index_1_packetNumber.ts?m=XXXXXXXXXXX</code>. This is going to act as the Template URL for the stream.</p>
+<h3 id="downloading-all-the-packets-using-the-template-url">Downloading all the Packets using the Template URL</h3>
+<p>As you can guess, incrementing the <code>packetNumber</code> in <code>index_1_packetNumber</code> will give us next part of the stream. So we can just use a simple <code>for</code> loop in <code>bash</code> and download all the packets.</p>
+<p>A few things I have noticed -</p>
+<ul>
+<li><p>Actual video starts between <code>packetNumber</code> 250 and 275</p></li>
+<li><p>The last packet number will depend on the length of the session. It can range between 600 and 850</p></li>
+<li><p>You will not be able to download a <code>packetNumber</code> if that part hasn&#x2019;t been streamed yet. So, if you try to download packet number 600 at the begininng of the stream, you are going to get a 404 error</p></li>
+</ul>
+<p>Keeping the above points in mind, use the following command to download the packets recursively -</p>
+<pre><code>for i in {270..710}; do wget -nc &quot;https://d1rtdzwv5q8fnq.cloudfront.net/out/v1/36bf9406a019476bbd82e03366686125/index_1_$i.ts?m=1593102717&quot;; done</code></pre>
+<p>Change the limits (270 and 710) and the template url accordingly. <br> You can open the inidividual packet files in your video player of choice and see if all the parts have been downloaded or not. For example,</p>
+<ul>
+<li><p>If you open the file for packet <code>270</code> and you see that the session has already begun - decrease the lower limit accordingly. (Sometimes it can go as low as 230).</p></li>
+<li><p>Similarly, If you open the last packet and you see that the workout is still going on - increase the upper limit.</p></li>
+</ul>
+<p>Once you have all the packets in one folder (make sure you have no other files in that folder) the output should look something like this -</p>
+<pre><code>-&gt; ls
+&#39;index_1_270.ts?m=1593102717&#39;  &#39;index_1_287.ts?m=1593102717&#39;  &#39;index_1_304.ts?m=1593102717&#39;  &#39;index_1_321.ts?m=1593102717&#39;  &#39;index_1_338.ts?m=1593102717&#39;  &#39;index_1_355.ts?m=1593102717&#39;
+&#39;index_1_271.ts?m=1593102717&#39;  &#39;index_1_288.ts?m=1593102717&#39;  &#39;index_1_305.ts?m=1593102717&#39;  &#39;index_1_322.ts?m=1593102717&#39;  &#39;index_1_339.ts?m=1593102717&#39;  &#39;index_1_356.ts?m=1593102717&#39;
+&#39;index_1_272.ts?m=1593102717&#39;  &#39;index_1_289.ts?m=1593102717&#39;  &#39;index_1_306.ts?m=1593102717&#39;  &#39;index_1_323.ts?m=1593102717&#39;  &#39;index_1_340.ts?m=1593102717&#39;  &#39;index_1_357.ts?m=1593102717&#39;
+&#39;index_1_273.ts?m=1593102717&#39;  &#39;index_1_290.ts?m=1593102717&#39;  &#39;index_1_307.ts?m=1593102717&#39;  &#39;index_1_324.ts?m=1593102717&#39;  &#39;index_1_341.ts?m=1593102717&#39;  &#39;index_1_358.ts?m=1593102717&#39;
+&#39;index_1_274.ts?m=1593102717&#39;  &#39;index_1_291.ts?m=1593102717&#39;  &#39;index_1_308.ts?m=1593102717&#39;  &#39;index_1_325.ts?m=1593102717&#39;  &#39;index_1_342.ts?m=1593102717&#39;  &#39;index_1_359.ts?m=1593102717&#39;
+&#39;index_1_275.ts?m=1593102717&#39;  &#39;index_1_292.ts?m=1593102717&#39;  &#39;index_1_309.ts?m=1593102717&#39;  &#39;index_1_326.ts?m=1593102717&#39;  &#39;index_1_343.ts?m=1593102717&#39;  &#39;index_1_360.ts?m=1593102717&#39;
+&#39;index_1_276.ts?m=1593102717&#39;  &#39;index_1_293.ts?m=1593102717&#39;  &#39;index_1_310.ts?m=1593102717&#39;  &#39;index_1_327.ts?m=1593102717&#39;  &#39;index_1_344.ts?m=1593102717&#39;  &#39;index_1_361.ts?m=1593102717&#39;
+&#39;index_1_277.ts?m=1593102717&#39;  &#39;index_1_294.ts?m=1593102717&#39;  &#39;index_1_311.ts?m=1593102717&#39;  &#39;index_1_328.ts?m=1593102717&#39;  &#39;index_1_345.ts?m=1593102717&#39;  &#39;index_1_362.ts?m=1593102717&#39;
+&#39;index_1_278.ts?m=1593102717&#39;  &#39;index_1_295.ts?m=1593102717&#39;  &#39;index_1_312.ts?m=1593102717&#39;  &#39;index_1_329.ts?m=1593102717&#39;  &#39;index_1_346.ts?m=1593102717&#39;  &#39;index_1_363.ts?m=1593102717&#39;
+&#39;index_1_279.ts?m=1593102717&#39;  &#39;index_1_296.ts?m=1593102717&#39;  &#39;index_1_313.ts?m=1593102717&#39;  &#39;index_1_330.ts?m=1593102717&#39;  &#39;index_1_347.ts?m=1593102717&#39;  &#39;index_1_364.ts?m=1593102717&#39;
+&#39;index_1_280.ts?m=1593102717&#39;  &#39;index_1_297.ts?m=1593102717&#39;  &#39;index_1_314.ts?m=1593102717&#39;  &#39;index_1_331.ts?m=1593102717&#39;  &#39;index_1_348.ts?m=1593102717&#39;  &#39;index_1_365.ts?m=1593102717&#39;
+&#39;index_1_281.ts?m=1593102717&#39;  &#39;index_1_298.ts?m=1593102717&#39;  &#39;index_1_315.ts?m=1593102717&#39;  &#39;index_1_332.ts?m=1593102717&#39;  &#39;index_1_349.ts?m=1593102717&#39;  &#39;index_1_366.ts?m=1593102717&#39;
+&#39;index_1_282.ts?m=1593102717&#39;  &#39;index_1_299.ts?m=1593102717&#39;  &#39;index_1_316.ts?m=1593102717&#39;  &#39;index_1_333.ts?m=1593102717&#39;  &#39;index_1_350.ts?m=1593102717&#39;  &#39;index_1_367.ts?m=1593102717&#39;
+&#39;index_1_283.ts?m=1593102717&#39;  &#39;index_1_300.ts?m=1593102717&#39;  &#39;index_1_317.ts?m=1593102717&#39;  &#39;index_1_334.ts?m=1593102717&#39;  &#39;index_1_351.ts?m=1593102717&#39;  &#39;index_1_368.ts?m=1593102717&#39;
+&#39;index_1_284.ts?m=1593102717&#39;  &#39;index_1_301.ts?m=1593102717&#39;  &#39;index_1_318.ts?m=1593102717&#39;  &#39;index_1_335.ts?m=1593102717&#39;  &#39;index_1_352.ts?m=1593102717&#39;
+&#39;index_1_285.ts?m=1593102717&#39;  &#39;index_1_302.ts?m=1593102717&#39;  &#39;index_1_319.ts?m=1593102717&#39;  &#39;index_1_336.ts?m=1593102717&#39;  &#39;index_1_353.ts?m=1593102717&#39;
+&#39;index_1_286.ts?m=1593102717&#39;  &#39;index_1_303.ts?m=1593102717&#39;  &#39;index_1_320.ts?m=1593102717&#39;  &#39;index_1_337.ts?m=1593102717&#39;  &#39;index_1_354.ts?m=1593102717&#39;</code></pre>
+<p>Ofcourse the number of files will be different in your case.</p>
+<h3 id="concatinating-the-files">Concatinating the files</h3>
+<p>You can use the <code>cat</code> command to join all the files together. As these files are <code>.ts</code> files we will have to use that extension.</p>
+<pre><code>cat * &gt; session.ts</code></pre>
+<p>Now that we have the <code>ts</code> file, we can use <code>ffmpeg</code> to change the container to <code>mp4</code>. <br> For this I am going to use <code>ffmpeg</code>. If you are on windows, I will be linking windows binaries for <code>ffmpeg</code> at the bottom.</p>
+<pre><code>ffmpeg -i session.ts -acodec copy -vcodec copy session.mp4</code></pre>
+<p>All Done :)</p>
+<hr />
+<p>Sources:</p>
+<ul>
+<li><code>curefit</code>: <a href="https://www.cure.fit" class="uri">https://www.cure.fit</a></li>
+<li><code>ffmpeg</code>: <a href="https://ffmpeg.zeranoe.com/builds/" class="uri">https://ffmpeg.zeranoe.com/builds/</a></li>
+<li><code>WSL</code>: <a href="https://docs.microsoft.com/en-us/windows/wsl/install-win10" class="uri">https://docs.microsoft.com/en-us/windows/wsl/install-win10</a></li>
+</ul></main></body></html>
