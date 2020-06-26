@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+<title>mananapr's blog</title>
+<description>My blog where I write about Linux, SysAdmin and Popular Media</description>
+<link>https://blog.mananapr.xyz</link>
+<ttl>1800</ttl>
+<atom:link href="https://blog.mananapr.xyz/blog.xml" rel="self" type="application/rss+xml" />
+
+<item>
+<title>26/06/2020: How I Use Curefit</title>
+<description>I describe a way to download streams from curefit</description>
+<link>https://blog.mananapr.xyz/curefit.html</link>
+<guid isPermaLink="true">https://blog.mananapr.xyz/curefit.html</guid>
+<pubDate>Fri, 26 Jun 2020</pubDate>
+</item>
+
+<item>
+<title>25/06/2020: Activate Microsoft Products</title>
+<description>Activate MS Windows and Office by hosting your own KMS Server!</description>
+<link>https://blog.mananapr.xyz/microsoft_activation.html</link>
+<guid isPermaLink="true">https://blog.mananapr.xyz/microsoft_activation.html</guid>
+<pubDate>Thu, 25 Jun 2020</pubDate>
+</item>
+
+<item>
+<title>22/06/2020: Album Recommendation - The Emerging</title>
+<description>My Review of Sutej Singh's The Emerging</description>
+<link>https://blog.mananapr.xyz/the_emerging.html</link>
+<guid isPermaLink="true">https://blog.mananapr.xyz/the_emerging.html</guid>
+<pubDate>Mon, 22 Jun 2020</pubDate>
+</item>
+
+<item>
+<title>21/06/2020: Consoomer Guide</title>
+<description>Learn how to consoom media on the internet</description>
+<link>https://blog.mananapr.xyz/consoom.html</link>
+<guid isPermaLink="true">https://blog.mananapr.xyz/consoom.html</guid>
+<pubDate>Sun, 21 Jun 2020</pubDate>
+</item>
+
+<item>
+<title>21/06/2020: Android Update</title>
+<description>I go over the changes I've made since my last post about Android</description>
+<link>https://blog.mananapr.xyz/android_update.html</link>
+<guid isPermaLink="true">https://blog.mananapr.xyz/android_update.html</guid>
+<pubDate>Sun, 21 Jun 2020</pubDate>
+</item>
+
+<item>
+<title>19/06/2020: Some Updates</title>
+<description>I am still alive!</description>
+<link>https://blog.mananapr.xyz/updates.html</link>
+<guid isPermaLink="true">https://blog.mananapr.xyz/updates.html</guid>
+<pubDate>Fri, 19 Jun 2020</pubDate>
+</item>
+
+<item>
+<title>22/12/2019: How to host your own Email Service</title>
+<description>Learn how to get your own email server and be a big boy!</description>
+<link>https://blog.mananapr.xyz/email.html</link>
+<guid isPermaLink="true">https://blog.mananapr.xyz/email.html</guid>
+<pubDate>Sun, 22 Dec 2019</pubDate>
+</item>
+
+<item>
+<title>18/12/2019: Services I Self Host</title>
+<description>An overview of the services I host on this very server</description>
+<link>https://blog.mananapr.xyz/selfhosting.html</link>
+<guid isPermaLink="true">https://blog.mananapr.xyz/selfhosting.html</guid>
+<pubDate>Wed, 18 Dec 2019</pubDate>
+</item>
+
+<item>
+<title>28/11/2019: My Bloat-Free Android Setup</title>
+<description>Learn about how I use Android without Google</description>
+<link>https://blog.mananapr.xyz/android.html</link>
+<guid isPermaLink="true">https://blog.mananapr.xyz/android.html</guid>
+<pubDate>Thu, 28 Nov 2019</pubDate>
+</item>
+
+<item>
+<title>28/11/2019: KISS Linux</title>
+<description>My review of KISS Linux</description>
+<link>https://blog.mananapr.xyz/kiss.html</link>
+<guid isPermaLink="true">https://blog.mananapr.xyz/kiss.html</guid>
+<pubDate>Thu, 28 Nov 2019</pubDate>
+</item>
+
+<item>
+<title>31/10/2019: My Vim Setup</title>
+<description>An overview of the various Vim settings and plugins I use</description>
+<link>https://blog.mananapr.xyz/vim.html</link>
+<guid isPermaLink="true">https://blog.mananapr.xyz/vim.html</guid>
+<pubDate>Thu, 31 Oct 2019</pubDate>
+</item>
+
+<item>
+<title>18/10/2019: Minimal Linux Desktop</title>
+<description>A quick tour of my Minimal Linux Desktop!</description>
+<link>https://blog.mananapr.xyz/rice.html</link>
+<guid isPermaLink="true">https://blog.mananapr.xyz/rice.html</guid>
+<pubDate>Fri, 18 Oct 2019</pubDate>
+</item>
+
+</channel>
+</rss>

@@ -1,5 +1,7 @@
 # mnnpr
 
+RSS Feed available here: @[/blog.xml](/blog.xml)
+
 ### June 2020
 - 2020 Jun 26 - [How I Use Curefit](/curefit.html)
 - 2020 Jun 25 - [Activate Microsoft Products](/microsoft_activation.html)
