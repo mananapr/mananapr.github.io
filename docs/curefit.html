@@ -61,7 +61,7 @@ If you are a freeloader or a pirate -
 <h3 id="concatinating-the-files">Concatinating the files</h3>
 <p>You can use the <code>cat</code> command to join all the files together. As these files are <code>.ts</code> files we will have to use that extension.</p>
 <pre><code>cat * &gt; session.ts</code></pre>
-<p>Now that we have the <code>ts</code> file, we can use <code>ffmpeg</code> to change the container to <code>mp4</code>. <br> For this I am going to use <code>ffmpeg</code>. If you are on windows, I will be linking windows binaries for <code>ffmpeg</code> at the bottom.</p>
+<p>Now that we have the <code>ts</code> file, we can use <code>ffmpeg</code> to change the container to <code>mp4</code>. <br> If you are on windows, I will be linking windows binaries for <code>ffmpeg</code> at the bottom.</p>
 <pre><code>ffmpeg -i session.ts -acodec copy -vcodec copy session.mp4</code></pre>
 <p>All Done :)</p>
 <blockquote>

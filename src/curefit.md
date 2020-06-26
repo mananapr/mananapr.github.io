@@ -111,7 +111,7 @@ cat * > session.ts
 
 Now that we have the `ts` file, we can use `ffmpeg` to change the container to `mp4`.
 <br>
-For this I am going to use `ffmpeg`. If you are on windows, I will be linking windows binaries for `ffmpeg` at the bottom.
+If you are on windows, I will be linking windows binaries for `ffmpeg` at the bottom.
 ```
 ffmpeg -i session.ts -acodec copy -vcodec copy session.mp4
 ```
