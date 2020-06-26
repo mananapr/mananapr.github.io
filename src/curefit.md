@@ -118,6 +118,18 @@ ffmpeg -i session.ts -acodec copy -vcodec copy session.mp4
 
 All Done :)
 
+<blockquote>
+How many videos do you have downloaded?
+</blockquote>
+
+```
+-> du -sh cure.fit/
+38G     cure.fit/
+-> find . -type f | wc -l
+191
+```
+and counting...
+
 ---
 
 Sources:

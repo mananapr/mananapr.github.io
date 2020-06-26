@@ -64,6 +64,14 @@ If you are a freeloader or a pirate -
 <p>Now that we have the <code>ts</code> file, we can use <code>ffmpeg</code> to change the container to <code>mp4</code>. <br> For this I am going to use <code>ffmpeg</code>. If you are on windows, I will be linking windows binaries for <code>ffmpeg</code> at the bottom.</p>
 <pre><code>ffmpeg -i session.ts -acodec copy -vcodec copy session.mp4</code></pre>
 <p>All Done :)</p>
+<blockquote>
+How many videos do you have downloaded?
+</blockquote>
+<pre><code>-&gt; du -sh cure.fit/
+38G     cure.fit/
+-&gt; find . -type f | wc -l
+191</code></pre>
+<p>and counting&#x2026;</p>
 <hr />
 <p>Sources:</p>
 <ul>
