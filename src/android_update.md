@@ -31,3 +31,8 @@ Sources:
 
 - `Signal`: <https://signal.org/download/>
 - `Posidon`: <https://f-droid.org/en/packages/posidon.launcher/>
+
+<br>
+<center><i>
+comments and questions can be left [here](https://github.com/mananapr/blog/issues)
+</i></center>

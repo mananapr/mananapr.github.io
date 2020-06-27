@@ -196,3 +196,8 @@ slmgr.vbs -ato
 Sources:
 
 - `vlmcsd`: <https://github.com/kkkgo/vlmcsd>
+
+<br>
+<center><i>
+comments and questions can be left [here](https://github.com/mananapr/blog/issues)
+</i></center>

@@ -86,3 +86,8 @@ Sources:
 - `Dovecot`: <https://www.dovecot.org/>
 - `rclone`: <https://rclone.org/>
 - `Blog`: <https://github.com/mananapr/blog>
+
+<br>
+<center><i>
+comments and questions can be left [here](https://github.com/mananapr/blog/issues)
+</i></center>

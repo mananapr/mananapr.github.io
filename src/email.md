@@ -418,3 +418,8 @@ Sources:
 
 - `setting up spf, dkim & dmarc`: <https://www.linode.com/docs/email/postfix/configure-spf-and-dkim-in-postfix-on-debian-8/>
 - `email tester`: <https://www.mail-tester.com/>
+
+<br>
+<center><i>
+comments and questions can be left [here](https://github.com/mananapr/blog/issues)
+</i></center>

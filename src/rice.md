@@ -54,3 +54,8 @@ Sources:
 
 - `dotfiles`: <https://github.com/mananapr/dotfiles>
 - `rtile`: <https://github.com/xhsdf/rtile>
+
+<br>
+<center><i>
+comments and questions can be left [here](https://github.com/mananapr/blog/issues)
+</i></center>

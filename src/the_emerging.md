@@ -54,3 +54,8 @@ Sources:
 
 - `Full Album`: <https://invidio.us/watch?v=2MVb7CS0Atg>
 - `BandCamp`: <https://sutejsingh.bandcamp.com/releases>
+
+<br>
+<center><i>
+comments and questions can be left [here](https://github.com/mananapr/blog/issues)
+</i></center>

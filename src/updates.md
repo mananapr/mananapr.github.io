@@ -21,3 +21,8 @@ Also apart from Linux and SysAdmin stuff, I'm thinking of writing my thoughts on
 if I have the patience and dedication required for that but it's something I would atleast like to try.
 
 Lastly, I'm probably gonna rename the blog links in the index page. They are just too vague and lack verbosity.
+
+<br>
+<center><i>
+comments and questions can be left [here](https://github.com/mananapr/blog/issues)
+</i></center>

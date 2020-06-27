@@ -63,3 +63,8 @@ Sources:
 - `VimCompletesMe`: <https://github.com/ajh17/VimCompletesMe>
 - `fzf`: <https://github.com/junegunn/fzf.vim>
 - `vis`: <https://github.com/martanne/vis>
+
+<br>
+<center><i>
+comments and questions can be left [here](https://github.com/mananapr/blog/issues)
+</i></center>

@@ -90,3 +90,8 @@ Sources:
 - `microG`: <https://microg.org/>
 - `FDroid`: <https://f-droid.org/en/>
 - `nextcloud`: <https://nextcloud.com/>
+
+<br>
+<center><i>
+comments and questions can be left [here](https://github.com/mananapr/blog/issues)
+</i></center>

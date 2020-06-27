@@ -137,3 +137,8 @@ Sources:
 - `curefit`: <https://www.cure.fit>
 - `ffmpeg`: <https://ffmpeg.zeranoe.com/builds/>
 - `WSL`: <https://docs.microsoft.com/en-us/windows/wsl/install-win10>
+
+<br>
+<center><i>
+comments and questions can be left [here](https://github.com/mananapr/blog/issues)
+</i></center>

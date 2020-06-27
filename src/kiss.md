@@ -55,3 +55,8 @@ Sources:
 - `Dylan's Github`: <https://github.com/dylanaraps>
 - `Dylan's Patreon`: <https://www.patreon.com/dyla>
 - `sowm`: <https://github.com/dylanaraps/sowm>
+
+<br>
+<center><i>
+comments and questions can be left [here](https://github.com/mananapr/blog/issues)
+</i></center>

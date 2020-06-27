@@ -144,3 +144,8 @@ Sources:
 - `CTR`: <https://nyaa.si/user/Catar>
 - `VCB-Studio` <https://nyaa.si/user/VCB-Studio>
 - `Rutracker`: <https://rutracker.org/forum/index.php>
+
+<br>
+<center><i>
+comments and questions can be left [here](https://github.com/mananapr/blog/issues)
+</i></center>
