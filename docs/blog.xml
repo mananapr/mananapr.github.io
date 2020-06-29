@@ -8,6 +8,14 @@
 <atom:link href="https://blog.mananapr.xyz/blog.xml" rel="self" type="application/rss+xml" />
 
 <item>
+<title>29/06/2020: Minimal Linux Desktop Update</title>
+<description>I go through the various modifications I've made to my linux installation </description>
+<link>https://blog.mananapr.xyz/rice2.html</link>
+<guid isPermaLink="true">https://blog.mananapr.xyz/rice2.html</guid>
+<pubDate>Mon, 29 Jun 2020</pubDate>
+</item>
+
+<item>
 <title>29/06/2020: Movie Recommendation - 3-Iron</title>
 <description>My Review of the 2004 South Korean Masterpeice '3-Iron' directed by Kim Ki-duk</description>
 <link>https://blog.mananapr.xyz/3_iron.html</link>

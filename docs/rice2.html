@@ -1,0 +1,39 @@
+<!DOCTYPE html><html lang=en><head><meta name="description" content="I like to dream"/><link href="data:image/png;base64," rel=icon type="image/png"><title>mnnpr</title><meta name=viewport content="width=device-width"><style>body{overflow-y:scroll;font-family:sans-serif}img,main,pre>code{display:block;margin:25px auto}main{padding:20px;max-width:600px;line-height:1.6;word-wrap:break-word}img{max-width:100%}pre>code{padding:20px;white-space:pre-wrap}code{background:#eee;padding:2px}blockquote{border-left:7px solid #ddd;padding:0 14px;color:#666;margin:0}h1,h2,h3,h4{line-height:1.2}hr{border:2px solid #ddd}</style></head><body><main><a href='/'>mnnpr</a><h1 id="minimal-linux-desktop-update">Minimal Linux Desktop Update</h1>
+<p>It has been nearly 8 months since I last wrote about my linux desktop. Since then I&#x2019;ve made a lot of changes.</p>
+<p><picture> <img src="/images/rice2_1.png" alt="desktop"> </picture></p>
+<p>So as you can see in the screenshot above I&#x2019;ve moved back to Arch Linux. Not because I was unhappy with Alpine or KISS Linux, but because I had to install a lot of other applications dependent on KDE.</p>
+<p>So here I am back on Arch again. But this time I am running Suckless&#x2019;s DWM (Dynamic Window Manager) instead of Openbox. <br> It&#x2019;s lightweight, has tiling and above all - very customizable because it has a source based configuration. <br> Rather than enabling options on or off in the config file, in DWM - the source code is the config file. You download patches for the functionality you need and patch it into the source code. So each user&#x2019;s DWM build is going to be unique and will have no bloat at all. <br> If you are interested in testing out my build of <code>st</code> or <code>dwm</code> - I&#x2019;ll link to my build in the sources.</p>
+<p><picture> <img src="/images/rice2_2.png" alt="desktop"> </picture></p>
+<p>For IRC - I&#x2019;ve switched from <code>irssi</code> to <code>Weechat</code> mainly because Weechat is in active development while irssi hasn&#x2019;t received a commit in quite a while. <br> Weechat has better plugin support as well. I mostly hangout on <code>#rice</code> and <code>#8chan</code> on the Rizon IRC Network though I sometimes visit Lainchan&#x2019;s IRC network as well.</p>
+<p><picture> <img src="/images/rice2_3.png" alt="desktop"> </picture></p>
+<p>I mostly use the default stack layout in DWM but I do have the CentredMaster and Fibonacci Layouts patched as well. I might remove them later because I haven&#x2019;t used them even once. <br> I guess that&#x2019;s because I don&#x2019;t like to keep more than 3 windows in one workspace.</p>
+<p>Talking about workspaces - I am not using the default numeric tags. I&#x2019;ve named them as 3-4 letter words describing the purpose of that workspace:</p>
+<ul>
+<li><strong>web</strong>: Icecat (because Firefox broke on me)</li>
+<li><strong>tor</strong>: Tor-Browser</li>
+<li><strong>irc</strong>: Weechat</li>
+<li><strong>dev</strong>: Windows related to project work and programming</li>
+<li><strong>fun</strong>: Music, Movies etc</li>
+<li><strong>misc</strong>: Miscellaneous</li>
+<li><strong>mail</strong>: neomutt</li>
+<li><strong>chat</strong>: signal desktop</li>
+</ul>
+<p><picture> <img src="/images/rice2_4.png" alt="desktop"> </picture></p>
+<p>I&#x2019;ve also started using <code>newsboat</code>, which is a RSS reader for the terminal. It&#x2019;s really customizable and looks great.</p>
+<p>Also, I&#x2019;ve switched <code>lf</code> as my file manager and no longer use <code>monaco</code> as my terminal font. Instead, I&#x2019;ve been using <code>Iosevka</code> and it did take me some time to get used to its narrow look but I absolutely adore it now. <br> I am using a patched version of the font that supports Nerd Fonts glyphs. These glyphs include Powerline symbols which I use in neomutt and icons which I use in <code>lf</code>.</p>
+<hr />
+<p>Sources:</p>
+<ul>
+<li><code>dotfiles</code>: <a href="https://github.com/mananapr/dotfiles" class="uri">https://github.com/mananapr/dotfiles</a></li>
+<li><code>dwm</code>: <a href="https://github.com/mananapr/dwm-stuff" class="uri">https://github.com/mananapr/dwm-stuff</a></li>
+<li><code>st</code>: <a href="https://github.com/mananapr/st" class="uri">https://github.com/mananapr/st</a></li>
+<li><code>lf</code>: <a href="https://github.com/gokcehan/lf" class="uri">https://github.com/gokcehan/lf</a></li>
+<li><code>newsboat</code>: <a href="https://github.com/newsboat/newsboat" class="uri">https://github.com/newsboat/newsboat</a></li>
+<li><code>neomutt</code>: <a href="https://github.com/neomutt/neomutt" class="uri">https://github.com/neomutt/neomutt</a></li>
+<li><code>Iosevka</code>: <a href="https://github.com/be5invis/Iosevka" class="uri">https://github.com/be5invis/Iosevka</a></li>
+<li><code>Nerd Fonts</code>: <a href="https://github.com/ryanoasis/nerd-fonts" class="uri">https://github.com/ryanoasis/nerd-fonts</a></li>
+</ul>
+<br>
+<center>
+<i> comments and questions can be left <a href="https://github.com/mananapr/blog/issues">here</a> </i>
+</center></main></body></html>
