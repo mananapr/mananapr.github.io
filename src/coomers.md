@@ -103,28 +103,28 @@ But that doesn't means that there aren't any people who are living a simple life
 It perfectly captures simple living (even though it's not about it) -
 
 <picture>
-  <img src="/images/a_hidden_life_1.png" alt="a_hidden_life_1">
+  <img src="/images/a_hidden_life_1.webp" alt="a_hidden_life_1">
 </picture>
 <center>
 *men and women working as equals*
 </center>
 
 <picture>
-  <img src="/images/a_hidden_life_2.png" alt="a_hidden_life_2">
+  <img src="/images/a_hidden_life_2.webp" alt="a_hidden_life_2">
 </picture>
 <center>
 *spending some quality time with the family*
 </center>
 
 <picture>
-  <img src="/images/a_hidden_life_3.png" alt="a_hidden_life_3">
+  <img src="/images/a_hidden_life_3.webp" alt="a_hidden_life_3">
 </picture>
 <center>
 *who says you need to send your kids to school?*
 </center>
 
 <picture>
-  <img src="/images/a_hidden_life_4.png" alt="a_hidden_life_4">
+  <img src="/images/a_hidden_life_4.webp" alt="a_hidden_life_4">
 </picture>
 <center>
 *spending time with your significant other*
