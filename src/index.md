@@ -3,6 +3,7 @@
 RSS Feed available here: @[/blog.xml](/blog.xml)
 
 ### June 2020
+- 2020 Jun 30 - [The Rise of Coomers](/coomers.html)
 - 2020 Jun 29 - [Minimal Linux Desktop Update](/rice2.html)
 - 2020 Jun 29 - [Movie Recommendation - 3-Iron](/3_iron.html)
 - 2020 Jun 26 - [How I Use Curefit](/curefit.html)
