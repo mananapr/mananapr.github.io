@@ -12,7 +12,7 @@
   <img src="/images/3-iron_poster.webp" alt="3-iron_poster">
 </picture>
 
-*3-Iron* is one of the most beautifully simplistic movies I have ever seen.
+*3-Iron* is one of the most beautiful and tender movies I have ever seen.
 It is one of my comfy movies and although some of the scenes are a little difficult to watch, seeing the bonding between the two leads makes up for it.
 
 By the way - they never speak a single word to each other. Dialogue is sparsely used in this movie and I know this sounds pretentious but trust me it works really well.
@@ -28,8 +28,8 @@ Following his routine, he stumbles into a giant mansion. Although he thinks he i
 <br>
 They move from house-to-house, finding solace in each other - but never speak a word.
 
-A popular theory is that *Tae-Suk* is a part of *Sun-hwa*'s imagination and fantasies to leave her abusive marriage
-and the dreamlike tone along with the cryptic ending does lends some credibility to this theory but personally I don't like this theory at all.
+A popular theory is that *Tae-Suk* is a part of *Sun-hwa*'s fantasies to leave her abusive marriage.
+The dreamlike tone along with the cryptic ending does lends some credibility to this theory, but personally I don't like this theory at all.
 <br>
 For me, this theory drains out all the magic of their relationship and bonding.
 
