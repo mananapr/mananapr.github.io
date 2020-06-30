@@ -120,7 +120,7 @@ It perfectly captures simple living (even though it's not about it) -
   <img src="/images/a_hidden_life_3.webp" alt="a_hidden_life_3">
 </picture>
 <center>
-*who says you need to send your kids to school?*
+*imparting practical education (not a replacement of formal education)*
 </center>
 
 <picture>
@@ -131,8 +131,6 @@ It perfectly captures simple living (even though it's not about it) -
 </center>
 
 Whew! That certainly was quite a ride. I started with coomers and ended on simple living - like I said, this is mostly a ramble.
-
-This took a lot of time and to be honest - I am really proud of this essay (ramble lol). 
 
 ---
 
