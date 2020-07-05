@@ -2,6 +2,9 @@
 
 RSS Feed available here: @[/blog.xml](/blog.xml)
 
+### July 2020
+- 2020 Jul 05 - [Cash is Dying](/cash.html)
+
 ### June 2020
 - 2020 Jun 29 - [Minimal Linux Desktop Update](/rice2.html)
 - 2020 Jun 29 - [Movie Recommendation - 3-Iron](/3_iron.html)
