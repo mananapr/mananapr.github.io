@@ -32,8 +32,6 @@ Firstly, lets start with some good news - we don't have to guess the packet numb
 For the last packet, use a large number like 700. We will start getting *403 Forbidden* errors after we cross the last packet number.
 
 Another good news - we can download packet numbers even if they haven't been streamed yet. So no need to wait!
-As you can guess, incrementing the `packetNumber` in `index_1_packetNumber` will give us next part of the stream.
-So we can just use a simple `for` loop in `bash` and download all the packets.
 
 Now the bad news is - Unlike last time, We can't just loop over `XXX` and get all the packets. So we're going to need cookies for our curefit session.
 <br>

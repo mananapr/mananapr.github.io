@@ -1,3 +1,7 @@
+<center>
+*Read the updated version [here](/curefit.html)*
+<center>
+
 ```
 Before I start with the main content, I would like to clear up a few things -
 
