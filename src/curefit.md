@@ -1,5 +1,5 @@
 <center>
-*Read the updated version [here](/curefit.html)*
+*Read the updated version [here](/curefit_update.html)*
 </center>
 
 ```
