@@ -3,6 +3,7 @@
 RSS Feed available here: @[/blog.xml](/blog.xml)
 
 ### July 2020
+- 2020 Jul 11 - [Curefit - Updated Download Guide](/curefit_update.html)
 - 2020 Jul 05 - [Cash is Dying](/cash.html)
 
 ### June 2020

@@ -1,0 +1,31 @@
+<!DOCTYPE html><html lang=en><head><meta name="description" content="I like to dream"/><link href="data:image/png;base64," rel=icon type="image/png"><title>mnnpr</title><meta name=viewport content="width=device-width"><style>body{overflow-y:scroll;font-family:sans-serif}img,main,pre>code{display:block;margin:25px auto}main{padding:20px;max-width:600px;line-height:1.6;word-wrap:break-word}img{max-width:100%}pre>code{padding:20px;white-space:pre-wrap}code{background:#eee;padding:2px}blockquote{border-left:7px solid #ddd;padding:0 14px;color:#666;margin:0}h1,h2,h3,h4{line-height:1.2}hr{border:2px solid #ddd}</style></head><body><main><a href='/'>mnnpr</a><h1 id="downloading-from-curefit---an-update">Downloading from Curefit - An Update</h1>
+<center>
+<em>I strongly recommend going through the <a href="/curefit.html">earlier guide</a> before proceeding further</em>
+</center>
+<p>Curefit has updated their backend which alters the way they are serving their live streams. <br> Their older videos are still being served the old way, but in order to download their newer videos we&#x2019;re going to have to put in some extra effort.</p>
+<p>The major change they&#x2019;ve made is that you need to be authenticated to access the stream url. So, a simple <code>wget &lt;url&gt;</code> won&#x2019;t work this time. <br> As you can see in the image below, the base stream URL has also changed -</p>
+<p><picture> <img src="/images/curefit_update.png" alt="curefit - updated stream URL"> </picture></p>
+<h3 id="understanding-the-template-url">Understanding the Template URL</h3>
+<p>Like last time, we need to open the developer console during the stream to get the template URL. <br> In their newer videos, you&#x2019;re going to notice that this time they have two streams - <code>index1280x720_00XXX.ts</code> and the other would be for lower res. <br> Also the host URL is no more <em>cloudfront</em> - they have shifted to <em>live-vod.cure.fit</em>.</p>
+<p>So, the template URL is going to be something like this - <code>https://live-vod.cure.fit/blahblahblah/hls/index1280x720_00XXX.ts</code>, where <code>XXX</code> would be the packet number.</p>
+<h3 id="downloading-all-the-packets-using-the-template-url">Downloading all the Packets using the Template URL</h3>
+<p>Firstly, lets start with some good news - we don&#x2019;t have to guess the packet number range like last time. In their newer streams, the session starts at packet number <code>001</code>. For the last packet, use a large number like 700. We will start getting <em>403 Forbidden</em> errors after we cross the last packet number.</p>
+<p>Another good news - we can download packet numbers even if they haven&#x2019;t been streamed yet. So no need to wait! As you can guess, incrementing the <code>packetNumber</code> in <code>index_1_packetNumber</code> will give us next part of the stream. So we can just use a simple <code>for</code> loop in <code>bash</code> and download all the packets.</p>
+<p>Now the bad news is - Unlike last time, We can&#x2019;t just loop over <code>XXX</code> and get all the packets. So we&#x2019;re going to need cookies for our curefit session. <br> For this, I&#x2019;m gonna be using the <em>Export Cookies</em> extension for Firefox which I&#x2019;ll link at the bottom. It&#x2019;s open source, So I would recommend you use that as well.</p>
+<p>So open the stream you want to download, then click on the <em>Export Cookies</em> extension and download cookies for all the domains. The extension will save them in <code>cookies.txt</code> in your Downloads folder.</p>
+<p>Now, we just have to tell wget to use those cookies -</p>
+<pre><code>for i in {001..755}; do wget -U &#39;Mozilla/5.0 (X11; Linux x86_64; rv:30.0) Gecko/20100101 Firefox/30.0&#39; --load-cookies=/home/username/Downloads/cookies.txt -nc &quot;https://live-vod.cure.fit/2d2c96bc-e7a9-405b-9d22-e7f9cf13bd2c/hls/index1280x720_00$i.ts&quot;; done</code></pre>
+<h3 id="concatinating-the-files">Concatinating the files</h3>
+<p>This is same as last time -</p>
+<pre><code>cat * &gt; session.ts
+ffmpeg -i session.ts -acodec copy -vcodec copy session.mp4</code></pre>
+<p>All Done :)</p>
+<hr />
+<p>Sources:</p>
+<ul>
+<li><code>export cookies</code>: <a href="https://addons.mozilla.org/en-US/firefox/addon/export-cookies-txt/" class="uri">https://addons.mozilla.org/en-US/firefox/addon/export-cookies-txt/</a></li>
+</ul>
+<br>
+<center>
+<i> comments and questions can be left <a href="https://github.com/mananapr/blog/issues">here</a> </i>
+</center></main></body></html>

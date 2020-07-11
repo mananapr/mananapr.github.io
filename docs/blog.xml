@@ -8,6 +8,14 @@
 <atom:link href="https://blog.mananapr.xyz/blog.xml" rel="self" type="application/rss+xml" />
 
 <item>
+<title>11/07/2020: Curefit - An Updated Download Guide</title>
+<description>The guys at Curefit have made their backend more secure since my last post. This is an update on my earlier guide.</description>
+<link>https://blog.mananapr.xyz/curefit_update.html</link>
+<guid isPermaLink="true">https://blog.mananapr.xyz/curefit_update.html</guid>
+<pubDate>Sat, 11 Jul 2020</pubDate>
+</item>
+
+<item>
 <title>05/07/2020: Cash is Dying</title>
 <description>Cash is Dying! - Don't let it</description>
 <link>https://blog.mananapr.xyz/cash.html</link>
