@@ -5,7 +5,7 @@ I've been thinking about all these various sexual orientations these days and th
 So I did some research and found that the largest study on this topic, indicates that homosexuality is not caused by genetics. It's a result of various
 environmental and social factors<sup>[1]</sup>. The environmental factors also include things like the physical environment at the time the fetus is in the womb.
 
-So to me, it seems that in an *ideal* condition, homosexuality shouldn't even exist or should exists in a small population. Now I don't mean to say that
+So to me, it seems that in an *ideal* condition, homosexuality shouldn't even exist or should exist in a small population. Now I don't mean to say that
 homosexuality is something bad or something that needs to be cured. It's just unnatural from a biological perspective is all I am saying.
 
 Next, I started thinking about the larger picture - Paraphilia a.k.a Sexual Deviancy. Can homosexuality be considered deviant behaviour? Probably yes, because
