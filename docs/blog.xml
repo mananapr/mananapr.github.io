@@ -8,6 +8,14 @@
 <atom:link href="https://blog.mananapr.xyz/blog.xml" rel="self" type="application/rss+xml" />
 
 <item>
+<title>23/07/2020: Mozilla, Get your act together</title>
+<description>A rant on Mozilla's declining code quality</description>
+<link>https://blog.mananapr.xyz/mozilla.html</link>
+<guid isPermaLink="true">https://blog.mananapr.xyz/mozilla.html</guid>
+<pubDate>Thu, 23 Jul 2020 00:00:00 +0000</pubDate>
+</item>
+
+<item>
 <title>20/07/2020: On Deviancy</title>
 <description>I try to figure out why we have so many deviants present in our society today</description>
 <link>https://blog.mananapr.xyz/deviancy.html</link>
