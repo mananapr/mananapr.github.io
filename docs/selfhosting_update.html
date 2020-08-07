@@ -1,0 +1,65 @@
+<!DOCTYPE html><html lang=en><head><meta name="description" content="I like to dream"/><link href="data:image/png;base64," rel=icon type="image/png"><title>mnnpr</title><meta name=viewport content="width=device-width"><style>body{overflow-y:scroll;font-family:sans-serif}img,main,pre>code{display:block;margin:25px auto}main{padding:20px;max-width:600px;line-height:1.6;word-wrap:break-word}img{max-width:100%}pre>code{padding:20px;white-space:pre-wrap}code{background:#eee;padding:2px}blockquote{border-left:7px solid #ddd;padding:0 14px;color:#666;margin:0}h1,h2,h3,h4{line-height:1.2}hr{border:2px solid #ddd}</style></head><body><main><a href='/'>mnnpr</a><h1 id="selfhosting-update">Selfhosting Update</h1>
+<p>As you know, I was using a Hetzner VPS for hosting various services like Nextcloud, Email and this very blog. But last night I decided to nuke my VPS and now I&#x2019;m waiting for my domain to expire.</p>
+<p>The main reason I decided to go this route is because my self hosted email was giving me a lot of headaches. I was constantly worried about mail deliverability. On top of that, It&#x2019;s not like everyone has GPG set up, so I&#x2019;ve decided to settle with Tutanota for now. Tutanota provides 1GB of storage in their basic plan and it provides a way to send encrypted messages to non Tutanota users as well.</p>
+<p>Having a VPS just for Cloud and Web Hosting seemed a little excessive to me. So I&#x2019;ve shifted my blog to Github Pages and in place of NextCloud, I&#x2019;ve set up a very simple DAV Server on my raspberry pi. For storing some important documents, I&#x2019;m using <code>megatools</code> on my phone and laptop to upload/download files to/from my <code>Mega.nz</code> account.</p>
+<p>For my domain name, I&#x2019;m using <code>dynu</code>. They provide free subdomains with a DDNS service. So I have a <code>blahblahblah.dynu.net</code> domain now and a bash script running on my pi constantly updates the A records to point to my current IP.</p>
+<h2 id="generating-ssl-certificates">Generating SSL Certificates</h2>
+<p>When I started with this process, I was under the impression that generating SSL certificates for my new domain would be a pretty straightforward process using <code>Certbot</code>. But sadly, <code>Certbot</code> is not able to pass the ACME challenges for dynu. So instead, I had to use the <code>acme.sh</code> script which has a separate plugin for <code>dynu</code>. <br> To use that plugin, first we need to install the acme.sh script -</p>
+<pre><code>curl https://get.acme.sh | sh</code></pre>
+<p>Next, head to the <code>dynu</code> control panel and look for the API Credentials option. Then export them as your environment variables as shown -</p>
+<pre><code>export Dynu_ClientId=&quot;xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx&quot;
+export Dynu_Secret=&quot;yyyyyyyyyyyyyyyyyyyyyyyyy&quot;
+acme.sh --issue --dns dns_dynu -d mydyndomain.dynu.net</code></pre>
+<p>And if all work as expected, you will get your certificates.</p>
+<h2 id="setting-up-carddavcaldav">Setting Up CardDAV/CalDAV</h2>
+<p>When I started looking for DAV servers, the application I first came across was <code>Radicale</code>. I spent a good hour to set that up but still couldn&#x2019;t get it to behave nicely. IMO don&#x2019;t waste your time with that application. I&#x2019;m currently using <code>Baikal</code> and it&#x2019;s very nice.</p>
+<p>It just needs PHP7, SQlite and Nginx to function. Just extract the latest release from github into your webroot (/var/www/). Then setup a Nginx site as shown -</p>
+<pre><code>server {
+    listen 80;
+    server_name blahblahblah.dynu.net;
+    return 301 https://blahblahblah.dynu.net$request_uri;
+}
+
+server {
+  listen 443 ssl;
+  server_name blahblahblah.dynu.net;
+
+  ssl_certificate /home/user/.acme.sh/blahblahblah.dynu.net/blahblahblah.dynu.net.cer;
+  ssl_certificate_key /home/user/.acme.sh/blahblahblah.dynu.net/blahblahblah.dynu.net.key;
+
+  root /var/www/baikal/html;
+  index index.php;
+
+  rewrite ^/.well-known/caldav /dav.php redirect;
+  rewrite ^/.well-known/carddav /dav.php redirect;
+
+  charset utf-8;
+
+  location ~ /(\.ht|Core|Specific) {
+    deny all;
+    return 404;
+  }
+
+  location ~ ^(.+\.php)(.*)$ {
+    try_files $fastcgi_script_name =404;
+    include /etc/nginx/fastcgi_params;
+    fastcgi_split_path_info ^(.+\.php)(.*)$;
+    fastcgi_pass unix:/var/run/php/php7.0-fpm.sock;
+    fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+    fastcgi_param PATH_INFO $fastcgi_path_info;
+  }
+}</code></pre>
+<p>and you are done! Just open the URL in your browser and go through the one time admin setup. Then you can create a new user and setup syncing on your phone using <code>Davx5</code>.</p>
+<hr />
+<p>Sources:</p>
+<ul>
+<li><code>tutanota</code>: <a href="https://tutanota.com/" class="uri">https://tutanota.com/</a></li>
+<li><code>megatools</code>: <a href="https://megatools.megous.com/" class="uri">https://megatools.megous.com/</a></li>
+<li><code>dynu</code>: <a href="https://www.dynu.com/" class="uri">https://www.dynu.com/</a></li>
+<li><code>baikal</code>: <a href="https://sabre.io/baikal/" class="uri">https://sabre.io/baikal/</a></li>
+<li><code>davx5</code>: <a href="https://www.davx5.com/" class="uri">https://www.davx5.com/</a></li>
+</ul>
+<br>
+<center>
+<i> comments and questions can be left <a href="https://github.com/mananapr/mananapr.github.io/issues">here</a> </i>
+</center></main></body></html>

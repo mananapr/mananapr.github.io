@@ -2,6 +2,9 @@
 
 RSS Feed available here: @[/blog.xml](/blog.xml)
 
+### August 2020
+- 2020 Aug 07 - [Selfhosting Update](/selfhosting_update.html)
+
 ### July 2020
 - 2020 Jul 23 - [Mozilla, Get your act together](/mozilla.html)
 - 2020 Jul 20 - [On Deviancy](/deviancy.html)
