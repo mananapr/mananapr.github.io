@@ -24,5 +24,5 @@ Lastly, I'm probably gonna rename the blog links in the index page. They are jus
 
 <br>
 <center><i>
-comments and questions can be left [here](https://github.com/mananapr/blog/issues)
+comments and questions can be left [here](https://github.com/mananapr/mananapr.github.io/issues)
 </i></center>

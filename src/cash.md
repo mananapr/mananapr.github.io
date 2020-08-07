@@ -51,5 +51,5 @@ Sources:
 - `[3]`: <https://en.wikipedia.org/wiki/COVID-19_pandemic>
 
 <center><i>
-comments and questions can be left [here](https://github.com/mananapr/blog/issues)
+comments and questions can be left [here](https://github.com/mananapr/mananapr.github.io/issues)
 </i></center>
