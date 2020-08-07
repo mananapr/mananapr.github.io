@@ -1,3 +1,3 @@
 # blog
 
-https://blog.mananapr.xyz
+https://mananapr.github.io

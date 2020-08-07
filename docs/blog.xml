@@ -3,159 +3,159 @@
 <channel>
 <title>mananapr's blog</title>
 <description>My blog where I write about Linux, SysAdmin and Popular Media</description>
-<link>https://blog.mananapr.xyz</link>
+<link>https://mananapr.github.io</link>
 <ttl>1800</ttl>
-<atom:link href="https://blog.mananapr.xyz/blog.xml" rel="self" type="application/rss+xml" />
+<atom:link href="https://mananapr.github.io/blog.xml" rel="self" type="application/rss+xml" />
 
 <item>
 <title>23/07/2020: Mozilla, Get your act together</title>
 <description>A rant on Mozilla's declining code quality</description>
-<link>https://blog.mananapr.xyz/mozilla.html</link>
-<guid isPermaLink="true">https://blog.mananapr.xyz/mozilla.html</guid>
+<link>https://mananapr.github.io/mozilla.html</link>
+<guid isPermaLink="true">https://mananapr.github.io/mozilla.html</guid>
 <pubDate>Thu, 23 Jul 2020 00:00:00 +0000</pubDate>
 </item>
 
 <item>
 <title>20/07/2020: On Deviancy</title>
 <description>I try to figure out why we have so many deviants present in our society today</description>
-<link>https://blog.mananapr.xyz/deviancy.html</link>
-<guid isPermaLink="true">https://blog.mananapr.xyz/deviancy.html</guid>
+<link>https://mananapr.github.io/deviancy.html</link>
+<guid isPermaLink="true">https://mananapr.github.io/deviancy.html</guid>
 <pubDate>Mon, 20 Jul 2020 00:00:00 +0000</pubDate>
 </item>
 
 <item>
 <title>11/07/2020: Curefit - An Updated Download Guide</title>
 <description>The guys at Curefit have made their backend more secure since my last post. This is an update on my earlier guide.</description>
-<link>https://blog.mananapr.xyz/curefit_update.html</link>
-<guid isPermaLink="true">https://blog.mananapr.xyz/curefit_update.html</guid>
+<link>https://mananapr.github.io/curefit_update.html</link>
+<guid isPermaLink="true">https://mananapr.github.io/curefit_update.html</guid>
 <pubDate>Sat, 11 Jul 2020 00:00:00 +0000</pubDate>
 </item>
 
 <item>
 <title>05/07/2020: Cash is Dying</title>
 <description>Cash is Dying! - Don't let it</description>
-<link>https://blog.mananapr.xyz/cash.html</link>
-<guid isPermaLink="true">https://blog.mananapr.xyz/cash.html</guid>
+<link>https://mananapr.github.io/cash.html</link>
+<guid isPermaLink="true">https://mananapr.github.io/cash.html</guid>
 <pubDate>Sun, 05 Jul 2020 00:00:00 +0000</pubDate>
 </item>
 
 <item>
 <title>30/06/2020: The Rise of Coomers</title>
 <description>I ramble on about the rise of coomers and how it has been detrimental to our society</description>
-<link>https://blog.mananapr.xyz/coomers.html</link>
-<guid isPermaLink="true">https://blog.mananapr.xyz/coomers.html</guid>
+<link>https://mananapr.github.io/coomers.html</link>
+<guid isPermaLink="true">https://mananapr.github.io/coomers.html</guid>
 <pubDate>Tue, 30 Jun 2020 00:00:00 +0000</pubDate>
 </item>
 
 <item>
 <title>29/06/2020: Minimal Linux Desktop Update</title>
 <description>I go through the various modifications I've made to my linux installation </description>
-<link>https://blog.mananapr.xyz/rice2.html</link>
-<guid isPermaLink="true">https://blog.mananapr.xyz/rice2.html</guid>
+<link>https://mananapr.github.io/rice2.html</link>
+<guid isPermaLink="true">https://mananapr.github.io/rice2.html</guid>
 <pubDate>Mon, 29 Jun 2020 00:00:00 +0000</pubDate>
 </item>
 
 <item>
 <title>29/06/2020: Movie Recommendation - 3-Iron</title>
 <description>My Review of the 2004 South Korean Masterpeice '3-Iron' directed by Kim Ki-duk</description>
-<link>https://blog.mananapr.xyz/3_iron.html</link>
-<guid isPermaLink="true">https://blog.mananapr.xyz/3_iron.html</guid>
+<link>https://mananapr.github.io/3_iron.html</link>
+<guid isPermaLink="true">https://mananapr.github.io/3_iron.html</guid>
 <pubDate>Mon, 29 Jun 2020 00:00:00 +0000</pubDate>
 </item>
 
 <item>
 <title>26/06/2020: How I Use Curefit</title>
 <description>I describe a way to download streams from curefit</description>
-<link>https://blog.mananapr.xyz/curefit.html</link>
-<guid isPermaLink="true">https://blog.mananapr.xyz/curefit.html</guid>
+<link>https://mananapr.github.io/curefit.html</link>
+<guid isPermaLink="true">https://mananapr.github.io/curefit.html</guid>
 <pubDate>Fri, 26 Jun 2020 00:00:00 +0000</pubDate>
 </item>
 
 <item>
 <title>25/06/2020: Activate Microsoft Products</title>
 <description>Activate MS Windows and Office by hosting your own KMS Server!</description>
-<link>https://blog.mananapr.xyz/microsoft_activation.html</link>
-<guid isPermaLink="true">https://blog.mananapr.xyz/microsoft_activation.html</guid>
+<link>https://mananapr.github.io/microsoft_activation.html</link>
+<guid isPermaLink="true">https://mananapr.github.io/microsoft_activation.html</guid>
 <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
 </item>
 
 <item>
 <title>22/06/2020: Album Recommendation - The Emerging</title>
 <description>My Review of Sutej Singh's The Emerging</description>
-<link>https://blog.mananapr.xyz/the_emerging.html</link>
-<guid isPermaLink="true">https://blog.mananapr.xyz/the_emerging.html</guid>
+<link>https://mananapr.github.io/the_emerging.html</link>
+<guid isPermaLink="true">https://mananapr.github.io/the_emerging.html</guid>
 <pubDate>Mon, 22 Jun 2020 00:00:00 +0000</pubDate>
 </item>
 
 <item>
 <title>21/06/2020: Consoomer Guide</title>
 <description>Learn how to consoom media on the internet</description>
-<link>https://blog.mananapr.xyz/consoom.html</link>
-<guid isPermaLink="true">https://blog.mananapr.xyz/consoom.html</guid>
+<link>https://mananapr.github.io/consoom.html</link>
+<guid isPermaLink="true">https://mananapr.github.io/consoom.html</guid>
 <pubDate>Sun, 21 Jun 2020 00:00:00 +0000</pubDate>
 </item>
 
 <item>
 <title>21/06/2020: Android Update</title>
 <description>I go over the changes I've made since my last post about Android</description>
-<link>https://blog.mananapr.xyz/android_update.html</link>
-<guid isPermaLink="true">https://blog.mananapr.xyz/android_update.html</guid>
+<link>https://mananapr.github.io/android_update.html</link>
+<guid isPermaLink="true">https://mananapr.github.io/android_update.html</guid>
 <pubDate>Sun, 21 Jun 2020 00:00:00 +0000</pubDate>
 </item>
 
 <item>
 <title>19/06/2020: Some Updates</title>
 <description>I am still alive!</description>
-<link>https://blog.mananapr.xyz/updates.html</link>
-<guid isPermaLink="true">https://blog.mananapr.xyz/updates.html</guid>
+<link>https://mananapr.github.io/updates.html</link>
+<guid isPermaLink="true">https://mananapr.github.io/updates.html</guid>
 <pubDate>Fri, 19 Jun 2020 00:00:00 +0000</pubDate>
 </item>
 
 <item>
 <title>22/12/2019: How to host your own Email Service</title>
 <description>Learn how to get your own email server and be a big boy!</description>
-<link>https://blog.mananapr.xyz/email.html</link>
-<guid isPermaLink="true">https://blog.mananapr.xyz/email.html</guid>
+<link>https://mananapr.github.io/email.html</link>
+<guid isPermaLink="true">https://mananapr.github.io/email.html</guid>
 <pubDate>Sun, 22 Dec 2019 00:00:00 +0000</pubDate>
 </item>
 
 <item>
 <title>18/12/2019: Services I Self Host</title>
 <description>An overview of the services I host on this very server</description>
-<link>https://blog.mananapr.xyz/selfhosting.html</link>
-<guid isPermaLink="true">https://blog.mananapr.xyz/selfhosting.html</guid>
+<link>https://mananapr.github.io/selfhosting.html</link>
+<guid isPermaLink="true">https://mananapr.github.io/selfhosting.html</guid>
 <pubDate>Wed, 18 Dec 2019 00:00:00 +0000</pubDate>
 </item>
 
 <item>
 <title>28/11/2019: My Bloat-Free Android Setup</title>
 <description>Learn about how I use Android without Google</description>
-<link>https://blog.mananapr.xyz/android.html</link>
-<guid isPermaLink="true">https://blog.mananapr.xyz/android.html</guid>
+<link>https://mananapr.github.io/android.html</link>
+<guid isPermaLink="true">https://mananapr.github.io/android.html</guid>
 <pubDate>Thu, 28 Nov 2019 00:00:00 +0000</pubDate>
 </item>
 
 <item>
 <title>28/11/2019: KISS Linux</title>
 <description>My review of KISS Linux</description>
-<link>https://blog.mananapr.xyz/kiss.html</link>
-<guid isPermaLink="true">https://blog.mananapr.xyz/kiss.html</guid>
+<link>https://mananapr.github.io/kiss.html</link>
+<guid isPermaLink="true">https://mananapr.github.io/kiss.html</guid>
 <pubDate>Thu, 28 Nov 2019 00:00:00 +0000</pubDate>
 </item>
 
 <item>
 <title>31/10/2019: My Vim Setup</title>
 <description>An overview of the various Vim settings and plugins I use</description>
-<link>https://blog.mananapr.xyz/vim.html</link>
-<guid isPermaLink="true">https://blog.mananapr.xyz/vim.html</guid>
+<link>https://mananapr.github.io/vim.html</link>
+<guid isPermaLink="true">https://mananapr.github.io/vim.html</guid>
 <pubDate>Thu, 31 Oct 2019 00:00:00 +0000</pubDate>
 </item>
 
 <item>
 <title>18/10/2019: Minimal Linux Desktop</title>
 <description>A quick tour of my Minimal Linux Desktop!</description>
-<link>https://blog.mananapr.xyz/rice.html</link>
-<guid isPermaLink="true">https://blog.mananapr.xyz/rice.html</guid>
+<link>https://mananapr.github.io/rice.html</link>
+<guid isPermaLink="true">https://mananapr.github.io/rice.html</guid>
 <pubDate>Fri, 18 Oct 2019 00:00:00 +0000</pubDate>
 </item>
 
