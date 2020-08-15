@@ -8,6 +8,14 @@
 <atom:link href="https://mananapr.github.io/blog.xml" rel="self" type="application/rss+xml" />
 
 <item>
+<title>15/08/2020: Windows 10 LTSC is GOAT</title>
+<description>My experience with Windows 10 LTSC</description>
+<link>https://mananapr.github.io/win10_ltsc.html</link>
+<guid isPermaLink="true">https://mananapr.github.io/win10_ltsc.html</guid>
+<pubDate>Sun, 15 Aug 2020 00:00:00 +0000</pubDate>
+</item>
+
+<item>
 <title>07/08/2020: Selfhosting Update</title>
 <description>An update on the various things I selfhost</description>
 <link>https://mananapr.github.io/selfhosting_update.html</link>
