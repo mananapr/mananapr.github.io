@@ -8,7 +8,7 @@ This version of Windows is meant for enterprise use but unlike Windows 10 Enterp
 security updates and not feature updates which is super nice. There are no ads as well and telemetry is at a low level out of the box (which can be completely disabled using the DisableWinTracking<sup>[1]</sup>
 tool).
 
-This is how my LTSC installed looked when I first booted into it -
+This is how my LTSC install looked when I first booted into it -
 
 <picture>
   <img src="/images/win10_ltsc_1.png" alt="Stock Win10 LTSC">
