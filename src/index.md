@@ -3,7 +3,7 @@
 RSS Feed available here: @[/blog.xml](/blog.xml)
 
 ### August 2020
-- 2020 Aug 16 - [Windows 10 LTSC is GOAT](/win10_ltsc.html)
+- 2020 Aug 15 - [Windows 10 LTSC is GOAT](/win10_ltsc.html)
 - 2020 Aug 07 - [Selfhosting Update](/selfhosting_update.html)
 
 ### July 2020
