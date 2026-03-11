@@ -1,0 +1,117 @@
+<!DOCTYPE html><html lang=en><head><meta name="description" content="I like to dream"/><link href="data:image/png;base64," rel=icon type="image/png"><title>mnnpr</title><meta name=viewport content="width=device-width"><style>body{overflow-y:scroll;font-family:sans-serif}img,main,pre>code{display:block;margin:25px auto}main{padding:20px;max-width:600px;line-height:1.6;word-wrap:break-word}img{max-width:100%}pre>code{padding:20px;white-space:pre-wrap}code{background:#eee;padding:2px}blockquote{border-left:7px solid #ddd;padding:0 14px;color:#666;margin:0}h1,h2,h3,h4{line-height:1.2}hr{border:2px solid #ddd}</style></head><body><main><a href='/'>mnnpr</a><h1 id="nas-home-server-setup">NAS / Home Server Setup</h1>
+<p>For the past few years I{{content}}#x2019;ve wanted a small home server to store data,
+run some self-hosted services and generally have more control over my
+own infrastructure. Cloud services are convenient, but I prefer owning
+the hardware and the data whenever possible.</p>
+<p>So I finally built a small NAS / home server that sits quietly in the
+corner of my room and runs 24/7.</p>
+<p><picture> <img src="/images/nas1.png" alt="nas"> </picture></p>
+<p>The build itself is intentionally simple and power efficient. I
+didn{{content}}#x2019;t want anything complicated or noisy {{content}}#x2014; just something reliable that
+can store data and run a few containers.</p>
+<p>The motherboard I{{content}}#x2019;m using is the <strong>Topton N100 NAS
+board</strong>, which I had to import from China. It comes with an Intel
+N100 CPU and, most importantly, <strong>six SATA ports</strong> directly
+on the board which is rare for low-power mini-ITX systems. It also has 2
+M.2 ports, one of which can be extended to have an additional 6 SATA
+ports which is insane!</p>
+<p>For the case I went with the <strong>Fractal Design Node
+304</strong>. It{{content}}#x2019;s a compact mini-ITX case specifically designed for NAS
+builds and can hold <strong>up to six 3.5{{content}}#x201D; HDDs</strong> while still
+having room for a <strong>full-sized PSU</strong>, which makes the build
+much easier compared to cases that require SFX power supplies.</p>
+<p>Full hardware summary:</p>
+<ul>
+<li><strong>Motherboard</strong>: Topton N100 NAS board</li>
+<li><strong>Case</strong>: Fractal Design Node 304</li>
+<li><strong>RAM</strong>: 16GB DDR4</li>
+<li><strong>Drives</strong>: 4 {{content}}#xD7; 2TB WD Red HDDs</li>
+<li><strong>PSU</strong>: Full-size MSI PSU</li>
+</ul>
+<p>The N100 is extremely power efficient while still being more than
+powerful enough for NAS workloads and a handful of containers.</p>
+<hr />
+<h2 id="storage">Storage</h2>
+<p>For the OS I{{content}}#x2019;m running <strong>TrueNAS Core</strong><sup>[2]</sup>,
+mainly because it provides a clean interface for managing ZFS and
+requires very little maintenance.</p>
+<p>My storage pool is a <strong>ZFS RAIDZ1 (similar to RAID5)</strong>
+built from the four 2TB WD Red drives. This gives me redundancy against
+a single disk failure while still keeping reasonable usable
+capacity.</p>
+<p><picture> <img src="/images/nas2.png" alt="nas"> </picture></p>
+<p>ZFS brings a lot of nice features out of the box:</p>
+<ul>
+<li>checksumming and data integrity</li>
+<li>snapshots</li>
+<li>compression</li>
+<li>easy disk replacement</li>
+</ul>
+<p>It{{content}}#x2019;s probably overkill for a small home server, but it{{content}}#x2019;s extremely
+reliable and well tested.</p>
+<hr />
+<h2 id="backups">Backups</h2>
+<p>Even with redundancy, <strong>RAID is not a backup</strong>.</p>
+<p>All important data from the NAS is backed up to <strong>Backblaze
+B2</strong><sup>[3]</sup>. This ensures that even in the worst case
+scenario (disk failure, filesystem corruption, house burning down,
+etc.), the data still exists somewhere else.</p>
+<p>The backup jobs run periodically and only sync the datasets that
+actually matter.</p>
+<hr />
+<h2 id="self-hosted-applications">Self-Hosted Applications</h2>
+<p>The NAS also runs a bunch of services that I prefer hosting
+myself.</p>
+<p>Instead of using the TrueNAS app system, I simply run everything with
+<strong>Docker Compose</strong>. My full setup is available on my git
+repo<sup>[1]</sup>.</p>
+<p>All application data is stored in docker volumes, and those volumes
+are backed up to <strong>Backblaze B2</strong> separately as well.</p>
+<p>The services I currently host are:</p>
+<ul>
+<li><strong>Vaultwarden</strong> {{content}}#x2013; password manager</li>
+<li><strong>Miniflux</strong> {{content}}#x2013; RSS reader</li>
+<li><strong>Baikal</strong> {{content}}#x2013; CalDAV / CardDAV server</li>
+<li><strong>Microbin</strong> {{content}}#x2013; pastebin</li>
+<li><strong>Memos</strong> {{content}}#x2013; note taking</li>
+<li><strong>Paperless-ngx</strong> {{content}}#x2013; document management</li>
+<li><strong>Jellyfin</strong> {{content}}#x2013; media server</li>
+<li><strong>qBittorrent</strong> - sailing the seven seas</li>
+<li><strong>Immich</strong> {{content}}#x2013; photo backup similar to google photos</li>
+</ul>
+<p><picture> <img src="/images/nas3.png" alt="nas"> </picture></p>
+<p>Most of these services are fairly lightweight, so the N100 handles
+them easily.</p>
+<hr />
+<h2 id="remote-access">Remote Access</h2>
+<p>I don{{content}}#x2019;t expose any of these services directly to the internet.</p>
+<p>Instead I run a <strong>self-hosted Headscale
+server</strong><sup>[4]</sup>, which provides a <strong>mesh
+VPN</strong> similar to Tailscale. All my devices join the network and
+can securely access the NAS from anywhere.</p>
+<p>This keeps things simple:</p>
+<ul>
+<li>no open ports</li>
+<li>no reverse proxies</li>
+<li>no dealing with certificates</li>
+</ul>
+<p>Everything just works once the device joins the mesh network.</p>
+<hr />
+<p>Sources:</p>
+<ul>
+<li><code>[1]</code>: <a href="https://github.com/mananapr/nas"
+class="uri">https://github.com/mananapr/nas</a></li>
+<li><code>[2]</code>: <a href="https://www.truenas.com/"
+class="uri">https://www.truenas.com/</a></li>
+<li><code>[3]</code>: <a
+href="https://www.backblaze.com/b2/cloud-storage.html"
+class="uri">https://www.backblaze.com/b2/cloud-storage.html</a></li>
+<li><code>[4]</code>: <a href="https://github.com/juanfont/headscale"
+class="uri">https://github.com/juanfont/headscale</a></li>
+</ul>
+<br>
+<center>
+<i> comments and questions can be left <a
+href="https://github.com/mananapr/mananapr.github.io/issues">here</a>
+</i>
+</center></main></body></html>
