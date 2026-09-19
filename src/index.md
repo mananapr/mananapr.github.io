@@ -2,6 +2,9 @@
 
 RSS Feed available here: @[/blog.xml](/blog.xml)
 
+### September 2026
+- 2026 Sep 19 - [Comparing Hollow Knight and Silksong](/hollowknight.html)
+
 ### March 2026
 - 2026 Mar 11 - [NAS/Homeserver Setup](/homeserver.html)
 
